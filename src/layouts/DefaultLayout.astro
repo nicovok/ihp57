@@ -1,0 +1,65 @@
+---
+import BareLayout from 'src/layouts/BareLayout.astro';
+import Navbar from 'src/components/navbar.astro';
+
+import { getLangFromUrl } from 'src/i18n/utils';
+import { sponsors } from 'src/config/sponsors';
+
+import '@fontsource/montserrat/100.css';
+import '@fontsource/montserrat/300.css';
+import '@fontsource/montserrat/400.css';
+import '@fontsource/montserrat/500.css';
+import '@fontsource/montserrat/700.css';
+import '@fontsource/montserrat/900.css';
+import MobileNavbar from 'src/components/mobile-navbar.astro';
+
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
+---
+
+<BareLayout>
+    <title slot="head">{title} | hockeypro57</title>
+    <meta slot="head" property="og:title" content={title} />
+    <div class="max-w-screen-2xl mx-auto bg-white shadow-md">
+        <Navbar />
+        <MobileNavbar />
+        <slot />
+        <footer>
+            <div
+                class="flex gap-14 justify-center flex-wrap bg-white py-32 px-5"
+            >
+                {
+                    sponsors.map((sponsor) => (
+                        <img
+                            src={sponsor.img}
+                            alt={sponsor.name[lang]}
+                            class="max-h-20"
+                        />
+                    ))
+                }
+            </div>
+            <div
+                class="flex py-5 sm:py-0 flex-col md:flex-row items-center justify-center sm:justify-start gap-5 px-5 bg-neutral-100"
+            >
+                <img src="/images/logo.svg" class="h-32 md:h-20" />
+                <p class="flex gap-3 items-center text-lg">
+                    <img src="/icons/mail.svg" />
+                    <span>
+                        hello@icehockeypro57{
+                            lang == 'en' ? '.com' : '.hu'
+                        }</span
+                    >
+                </p>
+                <p class="flex gap-3 items-center text-lg">
+                    <img src="/icons/phone.svg" />
+                    <span> +36706157577</span>
+                </p>
+            </div>
+        </footer>
+    </div>
+</BareLayout>

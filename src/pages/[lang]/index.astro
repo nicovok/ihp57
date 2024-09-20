@@ -1,0 +1,54 @@
+---
+import {
+    getLangFromUrl,
+    staticPathsForMultilang,
+    useTranslations,
+} from 'src/i18n/utils';
+
+import Layout from 'src/layouts/DefaultLayout.astro';
+
+import Jumbo from 'src/components/home/jumbo.astro';
+import Reviews from 'src/components/home/reviews.astro';
+import Trainings from 'src/components/home/trainings.astro';
+import Services from '@components/home/services.astro';
+import { Image } from 'astro:assets';
+
+export const getStaticPaths = staticPathsForMultilang();
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title={t('home.banner.lead')}>
+    <Jumbo />
+    <Trainings />
+    <Services />
+    <Reviews />
+    <section class="hidden sm:block">
+        <Image
+            src="/images/home/group-photo.jpg"
+            alt="Group Photo"
+            width={6088}
+            height={2184}
+        />
+    </section>
+    <section>
+        <div
+            class="flex flex-col gap-10 sm:flex-row sm:justify-between items-center py-16 px-10 uppercase text-center bg-gray-100"
+        >
+            <div class="flex flex-col sm:flex-row items-center gap-5">
+                <img src="/images/logo.svg" class="aspect-square w-32" />
+                <h2 class="font-bold text-4xl">
+                    {t('home.are-you-ready.base')}
+                </h2>
+            </div>
+
+            <button
+                class="py-4 px-8 uppercase font-bold text-2xl border border-black bg-white shadow-lg"
+            >
+                <a href={`/${lang}/contact`}>{t('home.are-you-ready.button')}</a
+                >
+            </button>
+        </div>
+    </section>
+</Layout>

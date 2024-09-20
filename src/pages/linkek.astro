@@ -1,0 +1,57 @@
+---
+import BareLayout from 'src/layouts/BareLayout.astro';
+import { sponsors } from 'src/config/sponsors';
+import { links } from 'src/config/links';
+import { defaultLang } from 'src/i18n/ui';
+---
+
+<BareLayout>
+    <div
+        class="max-w-4xl mx-auto bg-white py-5 min-h-screen md:pt-14 shadow"
+    >
+        <div class="flex items-center flex-col px-10">
+            <a href="/">
+                <img
+                    src="/images/logo.svg"
+                    class="aspect-square w-44"
+                />
+            </a>
+            <div
+                class="flex justify-center flex-wrap gap-x-10 mt-3 gap-y-5"
+            >
+                {
+                    sponsors
+                        .slice(0, 2)
+                        .map((sponsor) => (
+                            <img
+                                class="h-8"
+                                src={sponsor.img}
+                            />
+                        ))
+                }
+            </div>
+            <div class="flex flex-col mt-16 space-y-5">
+                <a href={defaultLang + "/camps"} class="px-8 py-4 border text-center text-lg sm:text-xl border-black cursor-pointer shadow-lg shadow-primary/20">
+                    Jelentkezek a táborokra!
+                </a>
+                <a href={defaultLang + "/contact"} class="px-8 py-4 border text-center text-lg sm:text-xl border-black cursor-pointer shadow-lg shadow-secondary/20">
+                    Jelentkezek az edzésekre!
+                </a>
+                <hr class="border-black mx-0" />
+                {
+                    links.map((link) => (
+                        <a
+                            href={link.url}
+                            class="grid grid-cols-3 items-center px-8 py-4 text-xl border border-black hover:bg-neutral-100 shadow-inner"
+                        >
+                            <img src={link.icon} />
+                            <span class="text-center">
+                                {link.label}
+                            </span>
+                        </a>
+                    ))
+                }
+            </div>
+        </div>
+    </div>
+</BareLayout>

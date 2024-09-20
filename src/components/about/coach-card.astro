@@ -1,0 +1,34 @@
+---
+import { type Coach } from 'src/config/coaches.tsx';
+import { Image } from 'astro:assets';
+
+import { getLangFromUrl } from 'src/i18n/utils';
+
+interface Props {
+    coach: Coach;
+}
+
+const { coach } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+---
+
+<div class="bg-white shadow-sm">
+    <Image
+        src={coach.img}
+        alt={coach.name[lang]}
+        width={2211}
+        height={3349}
+        class="object-cover w-full object-top aspect-square"
+    />
+    <div class="p-3">
+        <p class="uppercase font-bold text-xl">
+            {coach.name[lang]}
+        </p>
+        <p class="uppercase font-medium text-sm">
+            {coach.role[lang]}
+        </p>
+        <p class="mt-5" data-expandable>
+            {coach.text[lang]}
+        </p>
+    </div>
+</div>

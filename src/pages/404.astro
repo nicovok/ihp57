@@ -1,0 +1,33 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import Layout from 'src/layouts/DefaultLayout.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title="Ez az oldal nem található!">
+    <section class="bg-neutral-100">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+            <div class="mx-auto max-w-screen-sm text-center space-y-6">
+                <h1
+                    class="text-7xl tracking-tighter font-extrabold lg:text-9xl"
+                >
+                    404
+                </h1>
+                <p
+                    class="text-3xl tracking-tight font-medium text-gray-900 md:text-4xl"
+                >
+                    {t('notfound')}
+                </p>
+                <hr class="border-2 border-primary w-24 mx-auto" />
+                <p class="space-x-4 underline">
+                    <a href={`/${lang}/home`}>{t('nav.home')}</a>
+                    <a href={`/${lang}/camps`}>{t('nav.camps')}</a>
+                    <a href={`/${lang}/about`}>{t('nav.about')}</a>
+                    <a href={`/${lang}/contact`}>{t('nav.contact')}</a>
+                </p>
+            </div>
+        </div>
+    </section>
+</Layout>

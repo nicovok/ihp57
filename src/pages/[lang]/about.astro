@@ -1,0 +1,88 @@
+---
+import {
+    getLangFromUrl,
+    staticPathsForMultilang,
+    useTranslations,
+} from 'src/i18n/utils';
+import { coaches } from 'src/config/coaches';
+
+import Layout from 'src/layouts/DefaultLayout.astro';
+import CoachCard from 'src/components/about/coach-card.astro';
+import { Image } from 'astro:assets';
+
+export const getStaticPaths = staticPathsForMultilang();
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title={t('nav.about')}>
+    <section>
+        <div class="grid grid-cols-1 md:grid-cols-5">
+            <div class="md:col-span-2 lg:col-span-3">
+                <Image
+                    src="/images/about/founder.jpeg"
+                    alt="Orbán Attila sitting at a desk."
+                    width={1608}
+                    height={1058}
+                    class="md:h-full w-full object-cover"
+                />
+            </div>
+            <div class="md:col-span-3 lg:col-span-2">
+                <div
+                    class="px-5 md:px-10 py-10 md:py-16 space-y-3 md:space-y-5"
+                >
+                    <h2 class="text-2xl md:text-3xl font-bold uppercase">
+                        {t('about.founder.name')}
+                    </h2>
+                    <hr class="w-24 border-2 border-primary" />
+                    <p class="text-sm md:text-base">
+                        {t('about.founder.text')}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-neutral-100">
+        <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 px-5 sm:px-10 py-12"
+        >
+            {coaches.map((coach) => <CoachCard {...{ coach }} />)}
+        </div>
+    </section>
+</Layout>
+
+<script>
+    const len = 320;
+    const paragraphs =
+        document.querySelectorAll<HTMLParagraphElement>('[data-expandable]');
+    paragraphs.forEach((el) => {
+        const text = el.innerText;
+        if (text.length <= len) return;
+
+        el.innerHTML = '';
+        const textElement = document.createElement('span');
+        textElement.innerText = text.slice(0, len) + "...";
+        el.appendChild(textElement);
+
+        const readmore = document.createElement('button');
+        readmore.innerText = 'tovább';
+        readmore.classList.add(
+            'ml-1',
+            'italic',
+            'cursor-pointer',
+            'text-neutral-600'
+        );
+        readmore.onclick = () => {
+            if (textElement.innerText.length - 3 <= len) {
+                console.log("text");
+                textElement.innerText = text;
+                readmore.innerText = 'kevesebb';
+            } else {
+                textElement.innerText = text.slice(0, len) + "...";
+                readmore.innerText = 'tovább';
+            }
+        };
+        el.appendChild(readmore);
+    });
+</script>

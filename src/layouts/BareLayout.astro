@@ -1,0 +1,29 @@
+---
+import { getLangFromUrl, useTranslations } from 'src/i18n/utils';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<!doctype html>
+<html lang={lang}>
+    <head>
+        <slot name="head" />
+        <meta charset="UTF-8" />
+        <meta name="description" content={t('home.banner.description')} />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="generator" content={Astro.generator} />
+        <meta name="keywords" content={t('seo.keywords')} />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={t('seo.ogtitle')} />
+        <meta property="og:description" content={t('seo.ogdescription')} />
+        <meta property="og:site_name" content="icehockeypro57" />
+        <meta property="og:image" content="/images/home/trainings/group.jpg" />
+
+        <title>icehockeypro57</title>
+    </head>
+    <body class="bg-neutral-200">
+        <slot />
+    </body>
+</html>

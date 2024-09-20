@@ -1,0 +1,78 @@
+---
+import { Image } from 'astro:assets';
+import {
+    getLangFromUrl,
+    staticPathsForMultilang,
+    useTranslations,
+} from 'src/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="bg-neutral-100">
+    <div
+        class="grid grid-cols-2 xl:grid-cols-3 items-center py-20 px-5 md:px-10 gap-y-16 xl:gap-x-16"
+    >
+        <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center gap-6 col-span-2"
+        >
+            <div class="bg-white shadow">
+                <Image
+                    class="w-full h-80 object-cover"
+                    alt={t('home.trainings.group.lead')}
+                    width={6072}
+                    height={3860}
+                    src="/images/home/trainings/group.jpg"
+                />
+                <div class="p-5 space-y-5">
+                    <h3 class="uppercase font-bold text-xl">
+                        {t('home.trainings.group.lead')}
+                    </h3>
+                    <p>{t('home.trainings.group.description')}</p>
+                </div>
+            </div>
+            <div class="bg-white shadow">
+                <Image
+                    class="w-full h-80 object-cover"
+                    alt={t('home.trainings.athletics.lead')}
+                    width={6240}
+                    height={4160}
+                    src="/images/home/trainings/athletics.jpg"
+                />
+                <div class="p-5 space-y-5">
+                    <h3 class="uppercase font-bold text-xl">
+                        {t('home.trainings.athletics.lead')}
+                    </h3>
+                    <p>{t('home.trainings.athletics.description')}</p>
+                </div>
+            </div>
+            <div class="bg-white shadow">
+                <Image
+                    class="w-full h-80 object-cover"
+                    alt={t('home.trainings.private.lead')}
+                    width={5890}
+                    height={3694}
+                    src="/images/home/trainings/private.jpg"
+                />
+                <div class="p-5 space-y-5">
+                    <h3 class="uppercase font-bold text-xl">
+                        {t('home.trainings.private.lead')}
+                    </h3>
+                    <p>{t('home.trainings.private.description')}</p>
+                </div>
+            </div>
+        </div>
+        <div
+            class="order-first xl:order-last col-span-3 xl:col-span-1 space-y-4"
+        >
+            <h2 class="uppercase text-center xl:text-left font-bold text-3xl">
+                {t('home.trainings.lead')}
+            </h2>
+            <hr class="w-24 mx-auto xl:mx-0 border-primary border-2" />
+            <p class="text-justify xl:text-left">
+                {t('home.trainings.description')}
+            </p>
+        </div>
+    </div>
+</section>
