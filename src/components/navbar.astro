@@ -47,6 +47,16 @@ const urlOnNextLang = `/${nextLang}/${clearPath.join('/')}`;
                     >
                         Játékosközvetítés
                     </a>
+                     <a
+                        class={`${
+                            clearPath[0] == 'alapitvany'
+                                ? 'underline decoration-primary'
+                                : 'hover:underline decoration-black'
+                        } underline-offset-4 decoration-2`}
+                        href={`/${lang}/alapitvany`}
+                    >
+                        Alapítvány
+                    </a>
                 )
             }
             <a

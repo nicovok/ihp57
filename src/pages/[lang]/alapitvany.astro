@@ -1,0 +1,15 @@
+---
+import { staticPathsForMultilang } from "src/i18n/utils";
+import Layout from "src/layouts/DefaultLayout.astro";
+
+export const getStaticPaths = staticPathsForMultilang();
+---
+
+<Layout title="Alapítvány">
+  <section class="px-5 lg:px-10 py-5 space-y-5 bg-neutral-100">
+    <div>
+      <h1 class="text-4xl font-bold">Alapítvány</h1>
+      <p>Jégkorongért Alapítvány</p>
+    </div>
+  </section>
+</Layout>

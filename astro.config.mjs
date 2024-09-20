@@ -12,8 +12,8 @@ export default defineConfig({
     integrations: [tailwind(), react()],
     output: 'hybrid',
     adapter: vercel({
-        imageService: true,
-        devImageService: true,
+        imageService: false,
+        devImageService: false,
         webAnalytics: {
             enabled: true,
         },
