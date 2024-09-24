@@ -9,6 +9,6 @@ const { href, rawHref } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 ---
 
-<a href={rawHref ?? `/${lang}${href}`}>
+<a href={rawHref ?? `/${lang}${href}`} class="block">
   <slot />
 </a>
