@@ -1,65 +1,73 @@
 ---
-import BareLayout from 'src/layouts/BareLayout.astro';
-import Navbar from 'src/components/navbar.astro';
+import BareLayout from "src/layouts/BareLayout.astro";
+import Navbar from "src/components/navbar.astro";
 
-import { getLangFromUrl } from 'src/i18n/utils';
-import { sponsors } from 'src/config/sponsors';
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+import { sponsors } from "src/config/sponsors";
 
-import '@fontsource/montserrat/100.css';
-import '@fontsource/montserrat/300.css';
-import '@fontsource/montserrat/400.css';
-import '@fontsource/montserrat/500.css';
-import '@fontsource/montserrat/700.css';
-import '@fontsource/montserrat/900.css';
-import MobileNavbar from 'src/components/mobile-navbar.astro';
+import "@fontsource/montserrat/100.css";
+import "@fontsource/montserrat/300.css";
+import "@fontsource/montserrat/400.css";
+import "@fontsource/montserrat/500.css";
+import "@fontsource/montserrat/700.css";
+import "@fontsource/montserrat/900.css";
+import MobileNavbar from "src/components/mobile-navbar.astro";
+import LangSwitch from "src/components/lang-switch.astro";
+import Link from "src/components/link.astro";
 
 interface Props {
-    title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 
 const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <BareLayout>
-    <title slot="head">{title} | hockeypro57</title>
-    <meta slot="head" property="og:title" content={title} />
-    <div class="max-w-screen-2xl mx-auto bg-white shadow-md">
-        <Navbar />
-        <MobileNavbar />
-        <slot />
-        <footer>
-            <div
-                class="flex gap-14 justify-center flex-wrap bg-white py-32 px-5"
-            >
-                {
-                    sponsors.map((sponsor) => (
-                        <img
-                            src={sponsor.img}
-                            alt={sponsor.name[lang]}
-                            class="max-h-20"
-                        />
-                    ))
-                }
-            </div>
-            <div
-                class="flex py-5 sm:py-0 flex-col md:flex-row items-center justify-center sm:justify-start gap-5 px-5 bg-neutral-100"
-            >
-                <img src="/images/logo.svg" class="h-32 md:h-20" />
-                <p class="flex gap-3 items-center text-lg">
-                    <img src="/icons/mail.svg" />
-                    <span>
-                        hello@icehockeypro57{
-                            lang == 'en' ? '.com' : '.hu'
-                        }</span
-                    >
-                </p>
-                <p class="flex gap-3 items-center text-lg">
-                    <img src="/icons/phone.svg" />
-                    <span> +36706157577</span>
-                </p>
-            </div>
-        </footer>
-    </div>
+  <title slot="head">{title} | hockeypro57</title>
+  <meta slot="head" property="og:title" content={title} />
+
+  <div class="max-w-screen-2xl mx-auto bg-white shadow-md">
+    <Navbar />
+    <MobileNavbar />
+    <slot />
+    <footer>
+      <div
+        class="flex gap-14 justify-center flex-wrap bg-white py-32 px-5 sm:px-10"
+      >
+        {
+          sponsors.map((sponsor) => (
+            <img src={sponsor.img} alt={sponsor.name[lang]} class="max-h-16" />
+          ))
+        }
+      </div>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 gap-0 sm:gap-2 items-center py-3 px-5 sm:px-10 bg-neutral-100"
+      >
+        <div
+          class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 max-w-4xl sm:max-w-none sm:justify-start"
+        >
+          <div class="hidden sm:block">
+            <LangSwitch />
+          </div>
+          <Link href="/foundation">{t("nav.foundation")}</Link>
+        </div>
+        <hr class="sm:hidden w-36 my-3 mx-auto border-2 border-primary" />
+        <div
+          class="flex flex-col lg:flex-row gap-2 lg:gap-5 items-center lg:justify-end"
+        >
+          <p class="flex gap-2 items-center text-base">
+            <img src="/icons/mail.svg" class="h-5 w-5" />
+            <span>hello@icehockeypro57{lang == "en" ? ".com" : ".hu"}</span>
+          </p>
+          <p class="flex gap-2 items-center text-base">
+            <img src="/icons/phone.svg" class="h-5 w-5" />
+            <span>+36 (70) 615 - 7577</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
 </BareLayout>
