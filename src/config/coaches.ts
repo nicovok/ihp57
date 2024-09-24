@@ -159,21 +159,6 @@ export const coaches: Coach[] = [
         },
     },
     {
-        img: '/images/about/coaches/kornakkerdaniel.jpg',
-        name: {
-            hu: 'Kornakker Dániel',
-            en: 'Daniel Kornakker',
-        },
-        role: {
-            hu: 'kapusedző',
-            en: 'goalkeeper coach',
-        },
-        text: {
-            hu: 'Többszörös utánpótlás Magyar és EBYL bajnok vagyok. Ebel ezüstérmes. 2x Magyar kupa győztes. Aktív karrierem alatt több kiváló kapusedzőtől tanulhattam és szereztem tapasztalatot, melyet célom határozottan és jókedvűen átadni a gyerekeknek.',
-            en: 'I am a multiple junior Hungarian and EBYL champion. Ebel silver medalist. 2x Hungarian Cup winner. During my active career I have learned and gained experience from several excellent goalkeeping coaches, which I aim to pass on to the children in a determined and cheerful manner.',
-        },
-    },
-    {
         img: '/images/about/coaches/vagojacint.jpg',
         name: {
             hu: 'Vágó Jácint',
