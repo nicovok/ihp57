@@ -3,9 +3,10 @@ import { type FC, useState, useEffect, type ReactNode } from "react";
 
 interface CarouselProps {
   slides: ReactNode[];
+  className?: string;
 }
 
-const Carousel: FC<CarouselProps> = ({ slides }) => {
+const Carousel: FC<CarouselProps> = ({ slides, className }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const next = () => {
@@ -19,7 +20,7 @@ const Carousel: FC<CarouselProps> = ({ slides }) => {
   };
 
   return (
-    <div className="mt-10 max-w-2xl space-y-10">
+    <div className={`mt-10 max-w-2xl space-y-10 ${className}`}>
       {slides.map((slide, i) => (
         <div key={i} className={currentSlide == i ? "block" : "hidden"}>
           {slide}
