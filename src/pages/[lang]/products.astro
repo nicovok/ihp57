@@ -3,6 +3,7 @@ import { staticPathsForMultilang } from "src/i18n/utils";
 
 import DefaultLayout from "src/layouts/DefaultLayout.astro";
 
+export const prerender = true;
 export const getStaticPaths = staticPathsForMultilang();
 ---
 

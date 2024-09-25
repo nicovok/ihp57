@@ -10,6 +10,7 @@ import Layout from 'src/layouts/DefaultLayout.astro';
 import CoachCard from 'src/components/about/coach-card.astro';
 import { Image } from 'astro:assets';
 
+export const prerender = true;
 export const getStaticPaths = staticPathsForMultilang();
 
 const lang = getLangFromUrl(Astro.url);

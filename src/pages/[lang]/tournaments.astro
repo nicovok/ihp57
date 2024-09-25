@@ -14,10 +14,10 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<Layout title={t('nav.camps')}>
+<Layout title={t('nav.tournaments')}>
     <section class="px-5 lg:px-10 py-5 space-y-5 bg-neutral-100">
         <div>
-            <h1 class="text-4xl font-bold">{t('nav.camps')}</h1>
+            <h1 class="text-4xl font-bold">{t('nav.tournaments')}</h1>
             {
                 camps.length > 0 ? (
                     <p>{t('camps.heading.secondary')}</p>

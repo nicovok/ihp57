@@ -8,6 +8,8 @@ import {
 import Layout from "src/layouts/DefaultLayout.astro";
 import ContactForm from "src/components/contact/contact-form";
 import Link from "@components/link.astro";
+
+export const prerender = true;
 export const getStaticPaths = staticPathsForMultilang();
 
 const lang = getLangFromUrl(Astro.url);
