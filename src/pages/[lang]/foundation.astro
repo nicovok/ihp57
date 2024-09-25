@@ -1,0 +1,42 @@
+---
+import {
+  getLangFromUrl,
+  staticPathsForMultilang,
+  useTranslations,
+} from "src/i18n/utils";
+
+import DefaultLayout from "src/layouts/DefaultLayout.astro";
+
+export const prerender = true;
+export const getStaticPaths = staticPathsForMultilang();
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<DefaultLayout title={t("nav.foundation")}>
+  <section>
+    <div class="px-5 lg:px-10 py-5 bg-neutral-100">
+      <h1 class="text-4xl font-bold">{t("nav.foundation")}</h1>
+    </div>
+    <div class="px-5 lg:px-10 py-5 text-lg space-y-2">
+      <p>
+        <span class="font-medium">{t("foundation.name")}:</span> Icehockey Pro57
+        Alapítvány
+      </p>
+      <p>
+        <span class="font-medium">E-mail:</span> foundation@icehockeypro57.com
+      </p>
+      <p>
+        <span class="font-medium">{t("foundation.taxnumber")}:</span> 19395768-1-07
+      </p>
+      <p>
+        <span class="font-medium">{t("foundation.ban")}:</span> 11702012-21457816
+      </p>
+      <p>
+        <span class="font-medium">{t("foundation.seat")}:</span> 2400 Dunaújváros,
+        Széchenyi István utca 1. fszt./1.
+      </p>
+    </div>
+  </section>
+</DefaultLayout>

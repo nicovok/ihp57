@@ -1,0 +1,42 @@
+---
+import { staticPathsForMultilang } from "src/i18n/utils";
+
+import DefaultLayout from "src/layouts/DefaultLayout.astro";
+
+export const prerender = true;
+export const getStaticPaths = staticPathsForMultilang();
+---
+
+<DefaultLayout title="Termékek">
+  <section>
+    <div class="px-5 lg:px-10 py-5 bg-neutral-100">
+      <h1 class="text-4xl font-bold">Termékek</h1>
+    </div>
+    <div class="px-5 lg:px-10 py-5 flex flex-wrap justify-evenly gap-2">
+      <iframe
+        src="/images/products/jersey-black.pdf"
+        class="max-w-sm w-full aspect-[9/12]"></iframe>
+      <iframe
+        src="/images/products/jersey-red.pdf"
+        class="max-w-sm w-full aspect-[9/12]"></iframe>
+      <iframe
+        src="/images/products/trousers-black.pdf"
+        class="max-w-sm w-full aspect-[9/12]"></iframe>
+      <iframe
+        src="/images/products/baseball.pdf"
+        class="max-w-sm w-full aspect-[9/12]"></iframe>
+      <iframe
+        src="/images/products/beanie.pdf"
+        class="max-w-sm w-full aspect-[9/12]"></iframe>
+      <iframe
+        src="/images/products/torolkozo.pdf"
+        class="max-w-sm w-full aspect-[9/12]"></iframe>
+      <iframe
+        src="/images/products/sweater-red.pdf"
+        class="max-w-sm w-full aspect-[9/12]"></iframe>
+      <iframe
+        src="/images/products/sweater-black.pdf"
+        class="max-w-sm w-full aspect-[9/12]"></iframe>
+    </div>
+  </section>
+</DefaultLayout>

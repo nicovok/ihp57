@@ -13,6 +13,7 @@ import Trainings from 'src/components/home/trainings.astro';
 import Services from '@components/home/services.astro';
 import { Image } from 'astro:assets';
 
+export const prerender = true;
 export const getStaticPaths = staticPathsForMultilang();
 
 const lang = getLangFromUrl(Astro.url);

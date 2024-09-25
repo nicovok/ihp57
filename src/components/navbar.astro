@@ -1,78 +1,75 @@
 ---
-import { languages } from 'src/i18n/ui';
-import { getLangFromUrl, useTranslations } from 'src/i18n/utils';
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
 
-import MobileNavbar from './mobile-navbar.astro';
+import MobileNavbar from "./mobile-navbar.astro";
+import LangSwitch from "./lang-switch.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-const [, , ...clearPath] = Astro.url.pathname.split('/');
-const nextLang = lang == 'hu' ? 'en' : 'hu';
-const langLabel = languages[nextLang];
-const urlOnNextLang = `/${nextLang}/${clearPath.join('/')}`;
+const [, , ...clearPath] = Astro.url.pathname.split("/");
 ---
 
 <div
-    class="sticky top-0 z-10 hidden lg:flex justify-between items-center px-10 bg-white shadow"
+  class="sticky top-0 z-10 hidden lg:flex justify-between items-center px-10 bg-white/80 backdrop-blur shadow"
 >
-    <div class="flex gap-2 items-center">
-        <img src="/images/logo.svg" class="aspect-square w-16" />
-        <nav class="hidden lg:block space-x-4">
-            <a
-                class={`${
-                    clearPath[0] == ''
-                        ? 'underline decoration-primary'
-                        : 'hover:underline decoration-black'
-                } underline-offset-4 decoration-2`}
-                href={`/${lang}/`}>{t('nav.home')}</a
-            >
-            <a
-                class={`${
-                    clearPath[0] == 'camps'
-                        ? 'underline decoration-primary'
-                        : 'hover:underline decoration-black'
-                } underline-offset-4 decoration-2`}
-                href={`/${lang}/camps`}>{t('nav.camps')}</a
-            >
-            {
-                lang == 'hu' && (
-                    <a
-                        class={`${
-                            clearPath[0] == 'jatekoskozvetites'
-                                ? 'underline decoration-primary'
-                                : 'hover:underline decoration-black'
-                        } underline-offset-4 decoration-2`}
-                        href={`/${lang}/jatekoskozvetites`}
-                    >
-                        Játékosközvetítés
-                    </a>
-                )
-            }
-            <a
-                class={`${
-                    clearPath[0] == 'about'
-                        ? 'underline decoration-primary'
-                        : 'hover:underline decoration-black'
-                } underline-offset-4 decoration-2`}
-                href={`/${lang}/about`}>{t('nav.about')}</a
-            >
-            <a
-                class={`${
-                    clearPath[0] == 'contact'
-                        ? 'underline decoration-primary'
-                        : 'hover:underline'
-                } hover:underline underline-offset-4 decoration-2`}
-                href={`/${lang}/contact`}>{t('nav.contact')}</a
-            >
-        </nav>
-    </div>
-    <div class="flex gap-4 items-center">
-        <a href={urlOnNextLang}>{langLabel}</a>
-        <a href={`/${lang}/contact`}>
-            <button class="border border-black px-4 py-2"
-                >{t('nav.join-trainings')}
-            </button>
-        </a>
-    </div>
+  <div class="flex gap-2 items-center">
+    <img src="/images/logo.svg" class="aspect-square w-16" />
+    <nav class="hidden lg:block space-x-4">
+      <a
+        class={`${
+          clearPath[0] == ""
+            ? "underline decoration-primary"
+            : "hover:underline decoration-black"
+        } underline-offset-4 decoration-2`}
+        href={`/${lang}/`}>{t("nav.home")}</a
+      >
+      <a
+        class={`${
+          clearPath[0] == "camps"
+            ? "underline decoration-primary"
+            : "hover:underline decoration-black"
+        } underline-offset-4 decoration-2`}
+        href={`/${lang}/camps`}>{t("nav.camps")}</a
+      >
+      {
+        lang == "hu" && (
+          <a
+            class={`${
+              clearPath[0] == "jatekoskozvetites"
+                ? "underline decoration-primary"
+                : "hover:underline decoration-black"
+            } underline-offset-4 decoration-2`}
+            href={`/${lang}/jatekoskozvetites`}
+          >
+            Játékosközvetítés
+          </a>
+        )
+      }
+      <a
+        class={`${
+          clearPath[0] == "about"
+            ? "underline decoration-primary"
+            : "hover:underline decoration-black"
+        } underline-offset-4 decoration-2`}
+        href={`/${lang}/about`}>{t("nav.about")}</a
+      >
+      <a
+        class={`${
+          clearPath[0] == "contact"
+            ? "underline decoration-primary"
+            : "hover:underline"
+        } hover:underline underline-offset-4 decoration-2`}
+        href={`/${lang}/contact`}>{t("nav.contact")}</a
+      >
+    </nav>
+  </div>
+  <div class="flex gap-4 items-center">
+    <LangSwitch />
+    <a href={`/${lang}/contact`}>
+      <button class="border border-black px-4 py-2"
+        >{t("nav.join-trainings")}
+      </button>
+    </a>
+  </div>
 </div>

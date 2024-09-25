@@ -1,39 +1,49 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 import {
-    getLangFromUrl,
-    staticPathsForMultilang,
-    useTranslations,
-} from 'src/i18n/utils';
-import Layout from 'src/layouts/DefaultLayout.astro';
-import ContactForm from 'src/components/contact/contact-form';
+  getLangFromUrl,
+  staticPathsForMultilang,
+  useTranslations,
+} from "src/i18n/utils";
+import Layout from "src/layouts/DefaultLayout.astro";
+import ContactForm from "src/components/contact/contact-form";
+import Link from "@components/link.astro";
+
+export const prerender = true;
 export const getStaticPaths = staticPathsForMultilang();
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<Layout title={t('nav.contact')}>
-    <section>
-        <div
-            class="grid grid-cols-1 md:grid-cols-2 gap-5 bg-neutral-100"
-        >
-            <div class="px-10 py-10">
-                <h1 class="font-bold text-4xl">
-                    Vegyük fel a kapcsolatot!
-                </h1>
-                <hr
-                    class="border-primary border-2 my-2 w-24"
-                />
-                <ContactForm client:load lang={lang} />
-            </div>
-            <Image
-                src="/images/contact/contact.jpg"
-                alt="Contact"
-                width={5610}
-                height={3588}
-                class="w-full h-full object-cover"
-            />
+<Layout title={t("nav.contact")}>
+  <section>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 bg-neutral-100">
+      <div class="px-10 py-10 space-y-6">
+        <div>
+          <h1 class="font-bold text-4xl">Vegyük fel a kapcsolatot!</h1>
+          <hr class="border-primary border-2 my-2 w-24" />
+          <ContactForm client:load lang={lang} />
         </div>
-    </section>
+
+        <hr class="border-primary border-2 my-2 w-24" />
+
+        <Link href="/foundation">
+          <div
+            class="flex justify-between items-center bg-white p-4 border border-black"
+          >
+            <h1 class="font-semibold text-2xl">{t("nav.foundation")}</h1>
+            <img src="/icons/arrow-right.svg" class="aspect-square w-8" />
+          </div>
+        </Link>
+      </div>
+      <Image
+        src="/images/contact/contact.jpg"
+        alt="Contact"
+        width={5610}
+        height={3588}
+        class="w-full h-full object-cover"
+      />
+    </div>
+  </section>
 </Layout>
