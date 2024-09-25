@@ -26,11 +26,11 @@ https://icehockeypro57.com
         `,
   });
 
-  if (!process.env.SEND_TO) console.log("SEND_TO env var not set");
+  if (!import.meta.env.SEND_TO) console.log("SEND_TO env var not set");
 
   const { error: err2 } = await resend.emails.send({
     from: "Kapcsolatfelvétel <contact@ihp57.mdrrr.lol>",
-    to: process.env.SEND_TO?.split("|") ?? [],
+    to: import.meta.env.SEND_TO?.split("|") ?? [],
     subject: "ŰRLAPKITÖLTÉS | " + fields.name,
     text: `
 [Név]:
