@@ -8,8 +8,6 @@ export const POST: APIRoute = async ({ request }) => {
   const parseResult = contactFormSchema.safeParse(body);
   if (!parseResult.success) return new Response(null, { status: 400 });
 
-  console.log("Contacted form submitted by", parseResult.data.name);
-
   const fields = parseResult.data;
 
   const { error: err1 } = await resend.emails.send({
@@ -28,12 +26,11 @@ https://icehockeypro57.com
         `,
   });
 
+  if (!process.env.SEND_TO) console.log("SEND_TO env var not set");
+
   const { error: err2 } = await resend.emails.send({
     from: "Kapcsolatfelvétel <contact@ihp57.mdrrr.lol>",
-    to: [
-      "nicolas.prouteau.2007@gmail.com",
-      // 'attilaorban57@gmail.com',
-    ],
+    to: process.env.SEND_TO?.split("|") ?? [],
     subject: "ŰRLAPKITÖLTÉS | " + fields.name,
     text: `
 [Név]:
