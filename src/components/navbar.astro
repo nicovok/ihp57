@@ -40,20 +40,16 @@ const [, , ...clearPath] = Astro.url.pathname.split("/");
         } underline-offset-4 decoration-2`}
         href={`/${lang}/tournaments`}>{t("nav.tournaments")}</a
       >
-      {
-        lang == "hu" && (
-          <a
-            class={`${
-              clearPath[0] == "jatekoskozvetites"
-                ? "underline decoration-primary"
-                : "hover:underline decoration-black"
-            } underline-offset-4 decoration-2`}
-            href={`/${lang}/jatekoskozvetites`}
-          >
-            Közvetítés
-          </a>
-        )
-      }
+      <a
+        class={`${
+          clearPath[0] == "abroad"
+            ? "underline decoration-primary"
+            : "hover:underline decoration-black"
+        } underline-offset-4 decoration-2`}
+        href={`/${lang}/abroad`}
+      >
+        {t("nav.abroad")}
+      </a>
       <a
         class={`${
           clearPath[0] == "about"

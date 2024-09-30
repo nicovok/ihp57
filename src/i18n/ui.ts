@@ -17,6 +17,7 @@ export const ui = {
     "nav.home": "Home",
     "nav.about": "About us",
     "nav.tournaments": "Tournaments",
+    "nav.abroad": "Abroad",
     "nav.camps": "Camps",
     "nav.contact": "Contact",
     "nav.foundation": "Foundation",
@@ -80,6 +81,84 @@ export const ui = {
           </div>`,
     "tournaments.participate": "I participate!",
 
+    "abroad.title": "Talented Players for International Leagues",
+    "abroad.subtitle":
+      "We help young, talented players advance to foreign university and professional leagues.",
+    "abroad.content": `
+        <p>
+          Our program focuses not only on sports careers but also offers the opportunity for players to continue their high school or university studies, ensuring they can achieve a degree alongside their sports career in a comprehensive career path.
+        </p>
+        <p>
+          What do we offer? Applicants can apply for sports and academic scholarships based on their talent and achievements. For U18 players, we offer opportunities with AAA or AA teams, combined with high school studies. For U21 players, after completing high school, we provide access to American junior hockey leagues. The most outstanding players, after successful performances in junior leagues, have the chance to join one of the teams in the NCAA, the American collegiate hockey league.
+        </p>
+        <p class="font-medium">
+          For each player, we create a personalized PPRP (Professional Performance Review Plan) to support their development.
+        </p>
+        <div>
+          <p class="font-medium">
+            Leagues where we place our players:
+          </p>
+          <ul class="pl-5 list-disc">
+            <li>USHL - United States Hockey League</li>
+            <li>NAHL - North American Hockey League</li>
+            <li>NCDC - National Collegiate Development Conference</li>
+            <li>NA3HL - North American 3 Hockey League</li>
+            <li>USPHL - United States Premier Hockey League</li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-medium">
+            Scholarship opportunities in American university leagues:
+          </p>
+          <ul class="pl-5 list-disc">
+            <li>NCAA Division I</li>
+            <li>NCAA Division III</li>
+          </ul>
+        </div>
+        <p>
+          The NCAA is particularly interested in talented female players, who can also apply for scholarships covering up to 100%.
+        </p>
+        <div>
+          <p class="font-medium">
+            Notable Hungarian hockey players in the USA:
+          </p>
+          <ul class="pl-5 list-disc">
+            <li>
+              <a
+                href="https://www.curryathletics.com/sports/mice/2020-21/bios/eross_zoltan_nn75?view=bio"
+                >Zoltán Erőss <span class="italic text-neutral-600"
+                  >(NCAA D3)</span
+                ></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://womenshockeylife.com/from-budapest-to-north-dakota-dorottya-medgyes-journey-to-the-ncaa/"
+                >Dorottya Medgyes<span class="italic text-neutral-600"
+                  >(NCAA D1)</span
+                ></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://womenshockeylife.com/from-budapest-to-north-dakota-dorottya-medgyes-journey-to-the-ncaa/"
+                >Bálint Mesterházy <span class="italic text-neutral-600"
+                  >(NCAA D3)</span
+                ></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.eliteprospects.com/team/5718/hampton-roads-whalers/2022-2023?tab=stats"
+                >Dávid Barna<span class="italic text-neutral-600">(USPHL)</span
+                ></a
+              >
+            </li>
+          </ul>
+          <p class="pt-5">📩 Contact us, and let us help you start your international career!</p>
+        </div>
+    `,
+
     "formError.required": "Required!",
     "formError.invalid": "Invalid!",
     "formError.minlen": "Not long enough.",
@@ -96,6 +175,7 @@ export const ui = {
     "nav.about": "Rólunk",
     "nav.camps": "Táborok",
     "nav.tournaments": "Tornák",
+    "nav.abroad": "Közvetítés",
     "nav.contact": "Kapcsolat",
     "nav.foundation": "Alapítvány",
     "nav.join-trainings": "Csatlakozok az edzésekhez!",
@@ -160,6 +240,84 @@ export const ui = {
             </ul>
           </div>`,
     "tournaments.participate": "Részt veszek!",
+
+    "abroad.title": "Játékosok külföldre közvetítése",
+    "abroad.subtitle":
+      "Fiatal, tehetséges játékosokat segítünk külföldi egyetemi és profi ligákba való kijutásban.",
+    "abroad.content": `
+        <p>
+          A jelentkezők számára nem csak a sportkarrier áll a középpontban - lehetőséget biztosítunk arra is, hogy középiskolai vagy egyetemi tanulmányokat folytassanak, így egy teljes életpálya-modell mentén a diploma megszerzése is garantált.
+        </p>
+        <p>
+          Mit kínálunk? A jelentkezők tehetségük és eredményeik alapján sport- és tanulmányi ösztöndíjakra is pályázhatnak. Az U18-as korosztály számára a AAA vagy AA csapatoknál kínálunk pályázati lehetőséget középiskolai tanulmányokkal együtt. Az U21-es korosztály pedig középiskolai tanulmányok után amerikai junior jégkorong ligákban próbálhat szerencsét. A legkiválóbb játékosok számára, a junior ligákban való sikeres szereplés révén, megnyílik az út az amerikai egyetemi jégkorong liga (NCAA) egyik csapatához való csatlakozásra.
+        </p>
+        <p class="font-medium">
+          Minden játékos számára közösen elkészítjük a PPRP-t (Professional Performance Review Plan), amely személyre szabottan segíti a fejlődését.
+        </p>
+        <div>
+          <p class="font-medium">
+            Ligák, ahol játékosainkat közvetítjük:
+          </p>
+          <ul class="pl-5 list-disc">
+            <li>USHL - United States Hockey League</li>
+            <li>NAHL - North American Hockey League</li>
+            <li>NCDC - National Collegiate Development Conference</li>
+            <li>NA3HL - North American 3 Hockey League</li>
+            <li>USPHL - United States Premier Hockey League</li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-medium">
+            Ösztöndíj lehetőségek az amerikai egyetemi ligákban:
+          </p>
+          <ul class="pl-5 list-disc">
+            <li>NCAA Division I</li>
+            <li>NCAA Division III</li>
+          </ul>
+        </div>
+        <p>
+          Az NCAA különös figyelmet fordít a tehetséges női játékosokra, akik szintén akár 100%-os ösztöndíjat is elnyerhetnek.
+        </p>
+        <div>
+          <p class="font-medium">
+            Kiemelkedő magyar jégkorongozók az Egyesült Államokban:
+          </p>
+          <ul class="pl-5 list-disc">
+            <li>
+              <a
+                href="https://www.curryathletics.com/sports/mice/2020-21/bios/eross_zoltan_nn75?view=bio"
+                >Erőss Zoltán <span class="italic text-neutral-600"
+                  >(NCAA D3)</span
+                ></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://womenshockeylife.com/from-budapest-to-north-dakota-dorottya-medgyes-journey-to-the-ncaa/"
+                >Medgyes Dorottya <span class="italic text-neutral-600"
+                  >(NCAA D1)</span
+                ></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://womenshockeylife.com/from-budapest-to-north-dakota-dorottya-medgyes-journey-to-the-ncaa/"
+                >Balint Mesterhazy <span class="italic text-neutral-600"
+                  >(NCAA D3)</span
+                ></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.eliteprospects.com/team/5718/hampton-roads-whalers/2022-2023?tab=stats"
+                >Barna David <span class="italic text-neutral-600">(USPHL)</span
+                ></a
+              >
+            </li>
+          </ul>
+          <p class="pt-5">📩Lépj kapcsolatba velünk, és segítünk elindítani a nemzetközi karrieredet!</p>
+        </div>
+    `,
 
     "formError.required": "Kötelező!",
     "formError.invalid": "Érvénytelen!",
