@@ -1,0 +1,49 @@
+---
+import { Image } from "astro:assets";
+import {
+  getLangFromUrl,
+  staticPathsForMultilang,
+  useTranslations,
+} from "src/i18n/utils";
+
+import DefaultLayout from "src/layouts/DefaultLayout.astro";
+
+export const prerender = true;
+export const getStaticPaths = staticPathsForMultilang();
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<DefaultLayout title={t("abroad.title")}>
+  <meta slot="head" content="description" content={t("abroad.subtitle")} />
+  <meta slot="head" content="og:description" content={t("abroad.subtitle")} />
+
+  <section class="bg-neutral-100">
+    <div class="px-5 sm:px-10 py-5">
+      <h1 class="text-3xl lg:text-4xl font-bold">
+        {t("abroad.title")}
+      </h1>
+      <p>
+        {t("abroad.subtitle")}
+      </p>
+    </div>
+    <div class="grid lg:grid-cols-2 bg-white">
+      <div class="space-y-5 px-5 sm:px-10 py-5">
+        <Fragment set:html={t("abroad.content")} />
+      </div>
+      <Image
+        src="/images/management/main.jpg"
+        alt="Játékosközvetítés"
+        width="4032"
+        height="3024"
+        class="object-cover h-full"
+      />
+    </div>
+    <!--         <div>
+            TODO ide kell majd a tovabbiak resz, emailben leirva
+            <h1>Ezekben segíthetünk még:</h1>
+        </div>
+-->
+  </section>
+</DefaultLayout>
