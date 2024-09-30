@@ -61,6 +61,25 @@ export const ui = {
     "foundation.ban": "Bank account number",
     "foundation.seat": "Seat",
 
+    "tournaments.descripton": "🏒 Hockey Tournament - Sign Up Now! 🏒 🔵",
+    "tournaments.content": `
+          <p class="font-medium text-lg">Calling All Boys and Girls U8-U18!</p>
+          <p>
+            Join us for exciting hockey tournaments where you can test your skills in 3x3, 4x4, and 5x5 games!<br />
+            Teams can have a maximum of two or three lines, ensuring maximum playtime and intensity!
+          </p>
+          <div class="space-y-3">
+            <p class="font-medium">✅ What can you expect?</p>
+            <ul class="pl-5 space-y-1">
+              <li>• High-level matches</li>
+              <li>• Small rink and full rink challenges </li>
+              <li>
+                • Fun and competitive tournaments for all age groups
+              </li>
+            </ul>
+          </div>`,
+    "tournaments.participate": "I participate!",
+
     "formError.required": "Required!",
     "formError.invalid": "Invalid!",
     "formError.minlen": "Not long enough.",
@@ -119,6 +138,28 @@ export const ui = {
     "foundation.taxnumber": "Adószám",
     "foundation.ban": "Bankszámlaszám",
     "foundation.seat": "Székhely",
+
+    "tournaments.description": "🏒 HokiTorna - Jelentkezz most! 🏒 🔵",
+    "tournaments.content": `
+          <p class="font-medium text-lg">U8-U18 Fiúk és Lányok Figyelem!</p>
+          <p>
+            Gyere és vegyél részt izgalmas hokitornáinkon, ahol 3x3, 4x4, és 5x5
+            felállásban mérheted össze tudásodat másokkal!<br />
+            A tornákon két vagy három soros csapatokkal indulhatsz, így garantáljuk
+            a maximális játékélményt és intenzitást!
+          </p>
+          <div class="space-y-3">
+            <p class="font-medium">✅ Mi vár rád?</p>
+            <ul class="pl-5 space-y-1">
+              <li>• Magas színvonalú mérkőzések</li>
+              <li>• Kispályás és nagypályás kihívások</li>
+              <li>
+                • Fejlesztő, izgalmas versenyek minden korosztály számára Ne
+                maradj le!
+              </li>
+            </ul>
+          </div>`,
+    "tournaments.participate": "Részt veszek!",
 
     "formError.required": "Kötelező!",
     "formError.invalid": "Érvénytelen!",

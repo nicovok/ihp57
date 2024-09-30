@@ -1,11 +1,13 @@
 ---
-import { camps } from 'src/config/camps';
+import Link from "@components/link.astro";
+import { Image } from "astro:assets";
+import { camps } from "src/config/camps";
 import {
-    getLangFromUrl,
-    staticPathsForMultilang,
-    useTranslations,
-} from 'src/i18n/utils';
-import Layout from 'src/layouts/DefaultLayout.astro';
+  getLangFromUrl,
+  staticPathsForMultilang,
+  useTranslations,
+} from "src/i18n/utils";
+import Layout from "src/layouts/DefaultLayout.astro";
 
 export const prerender = true;
 export const getStaticPaths = staticPathsForMultilang();
@@ -14,45 +16,36 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<Layout title={t('nav.tournaments')}>
-    <section class="px-5 lg:px-10 py-5 space-y-5 bg-neutral-100">
-        <div>
-            <h1 class="text-4xl font-bold">{t('nav.tournaments')}</h1>
-            {
-                camps.length > 0 ? (
-                    <p>{t('camps.heading.secondary')}</p>
-                ) : (
-                    <p>{t('camps.heading.secondary-nocamp')}</p>
-                )
-            }
+<Layout title={t("nav.tournaments")}>
+  <section>
+    <div class="px-5 lg:px-10 py-5 bg-neutral-100">
+      <h1 class="text-4xl font-bold">{t("nav.tournaments")}</h1>
+      <p>{t("tournaments.description")}</p>
+    </div>
+    <div class="bg-white">
+      <div class="grid lg:grid-cols-2">
+        <div class="px-5 lg:px-10 py-5 space-y-5">
+          <Fragment set:html={t("tournaments.content")} />
+          <div class="mt-5 space-y-3">
+            <p>tournaments@icehockeypro57.com<br />+36 (70) 615 - 7577</p>
+            <Link href="/contact">
+              <button
+                class="flex gap-5 w-full lg:w-auto justify-between border border-black px-4 py-2"
+              >
+                <span>{t("tournaments.participate")}</span>
+                <img src="/icons/arrow-right.svg" class="h-6 w-6" />
+              </button>
+            </Link>
+          </div>
         </div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
-            {
-                camps.map((camp) => (
-                    <div class="flex flex-col md:flex-row gap-5 p-1 shadow hover:shadow-lg bg-white">
-                        <img
-                            src={
-                                camp.image
-                                    ? camp.image
-                                    : '/images/camps/default-cover.jpg'
-                            }
-                            class="aspect-video md:aspect-square md:h-44 object-cover"
-                        />
-                        <div class="flex flex-col items-start p-2">
-                            <p class="font-semibold text-2xl">
-                                {camp.name[lang]}
-                            </p>
-                            <hr class="w-24 mt-1 mb-2 text-ellipsis border border-primary" />
-                            <p class="flex-grow">{camp.description[lang]}</p>
-                            <a href={camp.link} target="_blank">
-                                <button class="mt-3 font-medium border border-black px-3 py-2">
-                                    Jelentkezés a táborra
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                ))
-            }
-        </div>
-    </section>
+        <Image
+          alt="img"
+          src="/images/etc/tournaments.jpg"
+          width={4215}
+          height={2636}
+          class="object-cover aspect-[4/3]"
+        />
+      </div>
+    </div>
+  </section>
 </Layout>

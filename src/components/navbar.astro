@@ -32,6 +32,14 @@ const [, , ...clearPath] = Astro.url.pathname.split("/");
         } underline-offset-4 decoration-2`}
         href={`/${lang}/camps`}>{t("nav.camps")}</a
       >
+      <a
+        class={`${
+          clearPath[0] == "tournaments"
+            ? "underline decoration-primary"
+            : "hover:underline decoration-black"
+        } underline-offset-4 decoration-2`}
+        href={`/${lang}/tournaments`}>{t("nav.tournaments")}</a
+      >
       {
         lang == "hu" && (
           <a
@@ -42,7 +50,7 @@ const [, , ...clearPath] = Astro.url.pathname.split("/");
             } underline-offset-4 decoration-2`}
             href={`/${lang}/jatekoskozvetites`}
           >
-            Játékosközvetítés
+            Közvetítés
           </a>
         )
       }
