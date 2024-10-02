@@ -1,11 +1,11 @@
 ---
-import { camps } from 'src/config/camps';
+import { camps } from "src/config/camps";
 import {
-    getLangFromUrl,
-    staticPathsForMultilang,
-    useTranslations,
-} from 'src/i18n/utils';
-import Layout from 'src/layouts/DefaultLayout.astro';
+  getLangFromUrl,
+  staticPathsForMultilang,
+  useTranslations,
+} from "src/i18n/utils";
+import Layout from "src/layouts/DefaultLayout.astro";
 
 export const prerender = true;
 export const getStaticPaths = staticPathsForMultilang();
@@ -14,45 +14,53 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<Layout title={t('nav.camps')}>
-    <section class="px-5 lg:px-10 py-5 space-y-5 bg-neutral-100">
-        <div>
-            <h1 class="text-4xl font-bold">{t('nav.camps')}</h1>
-            {
-                camps.length > 0 ? (
-                    <p>{t('camps.heading.secondary')}</p>
-                ) : (
-                    <p>{t('camps.heading.secondary-nocamp')}</p>
-                )
-            }
-        </div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
-            {
-                camps.map((camp) => (
-                    <div class="flex flex-col md:flex-row gap-5 p-1 shadow hover:shadow-lg bg-white">
-                        <img
-                            src={
-                                camp.image
-                                    ? camp.image
-                                    : '/images/camps/default-cover.jpg'
-                            }
-                            class="aspect-video md:aspect-square md:h-44 object-cover"
-                        />
-                        <div class="flex flex-col items-start p-2">
-                            <p class="font-semibold text-2xl">
-                                {camp.name[lang]}
-                            </p>
-                            <hr class="w-24 mt-1 mb-2 text-ellipsis border border-primary" />
-                            <p class="flex-grow">{camp.description[lang]}</p>
-                            <a href={camp.link} target="_blank">
-                                <button class="mt-3 font-medium border border-black px-3 py-2">
-                                    Jelentkezés a táborra
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                ))
-            }
-        </div>
-    </section>
+<Layout title={t("nav.camps")}>
+  <section class="px-5 lg:px-10 py-5 space-y-5 bg-neutral-100">
+    <div>
+      <h1 class="text-4xl font-bold">{t("nav.camps")}</h1>
+      {
+        camps.length > 0 ? (
+          <p>{t("camps.heading.secondary")}</p>
+        ) : (
+          <p>{t("camps.heading.secondary-nocamp")}</p>
+        )
+      }
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+      <div class="space-y-5">
+        {
+          camps.map((camp) => (
+            <div class="flex flex-col md:flex-row gap-5 p-1 shadow hover:shadow-lg bg-white">
+              <img
+                src={
+                  camp.image ? camp.image : "/images/camps/default-cover.jpg"
+                }
+                class="aspect-video md:aspect-square md:h-44 object-cover"
+              />
+              <div class="flex flex-col items-start p-2">
+                <p class="font-semibold text-2xl">{camp.name[lang]}</p>
+                <hr class="w-24 mt-1 mb-2 text-ellipsis border border-primary" />
+                <p class="flex-grow">{camp.description[lang]}</p>
+                <a href={camp.link} target="_blank">
+                  <button class="mt-3 font-medium border border-black px-3 py-2">
+                    Jelentkezés a táborra
+                  </button>
+                </a>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+      <div>
+        <iframe
+          src="https://www.youtube.com/embed/NDruJBt8578?si=mci4TYQ_0Kechsdl"
+          title="YouTube video player"
+          class="w-full aspect-[17/9]  sm:aspect-video"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
 </Layout>
