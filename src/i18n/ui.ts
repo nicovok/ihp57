@@ -457,7 +457,6 @@ export const ui = {
           <p>
             Válaszd ki a számodra legmegfelelőbb külföldi tanulmányi programot, és tedd meg az első lépést egy életre szóló élmény felé!
           </p>
-        </div>
     `,
 
     "formError.required": "Kötelező!",
