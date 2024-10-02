@@ -32,7 +32,9 @@ const t = useTranslations(lang);
   <div class="max-w-screen-2xl mx-auto bg-white shadow-md">
     <Navbar />
     <MobileNavbar />
-    <slot />
+    <div class="animate-fade">
+      <slot />
+    </div>
     <footer>
       <div
         class="flex gap-14 justify-center flex-wrap bg-white py-32 px-5 sm:px-10"
