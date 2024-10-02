@@ -20,7 +20,7 @@ const t = useTranslations(lang);
   <meta slot="head" content="og:description" content={t("abroad.subtitle")} />
 
   <section class="bg-neutral-100">
-    <div class="px-5 sm:px-10 py-5">
+    <div class="px-3 sm:px-10 py-5">
       <h1 class="text-3xl lg:text-4xl font-bold">
         {t("abroad.title")}
       </h1>
@@ -29,21 +29,34 @@ const t = useTranslations(lang);
       </p>
     </div>
     <div class="grid lg:grid-cols-2 bg-white">
-      <div class="space-y-5 px-5 sm:px-10 py-5">
-        <Fragment set:html={t("abroad.content")} />
+      <div class="space-y-5 px-3 sm:px-10 py-5 sm:py-10">
+        <Fragment set:html={t("abroad.section1")} />
       </div>
       <Image
         src="/images/management/main.jpg"
         alt="Játékosközvetítés"
         width="4032"
         height="3024"
-        class="object-cover h-full"
+        class="object-cover h-full hidden md:block"
       />
     </div>
-    <!--         <div>
+    <div class="grid lg:grid-cols-2 bg-white">
+      <Image
+        src="/images/management/second.jpg"
+        alt="Játékosközvetítés"
+        width="5657"
+        height="3771"
+        class="object-cover h-full min-h-[40rem]"
+      />
+
+      <div class="space-y-6 px-3 sm:px-10 py-5 sm:py-10">
+        <Fragment set:html={t("abroad.section2")} />
+      </div>
+    </div>
+  </section>
+  <!--         <div>
             TODO ide kell majd a tovabbiak resz, emailben leirva
             <h1>Ezekben segíthetünk még:</h1>
         </div>
 -->
-  </section>
 </DefaultLayout>
