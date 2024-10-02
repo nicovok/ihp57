@@ -84,7 +84,7 @@ export const ui = {
     "abroad.title": "Talented Players for International Leagues",
     "abroad.subtitle":
       "We help young, talented players advance to foreign university and professional leagues.",
-    "abroad.content": `
+    "abroad.section1": `
         <p>
           Our program focuses not only on sports careers but also offers the opportunity for players to continue their high school or university studies, ensuring they can achieve a degree alongside their sports career in a comprehensive career path.
         </p>
@@ -155,8 +155,84 @@ export const ui = {
               >
             </li>
           </ul>
-          <p class="pt-5">📩 Contact us, and let us help you start your international career!</p>
         </div>
+        <p class="pt-5">📩 Contact us, and let us help you start your international career!</p>
+    `,
+    "abroad.section2": `
+        <p class="font-medium">We can help with this too!</p>
+        <p>
+          Discover the opportunities with our international study programs! If
+          you’re a high school student and want to gain unique international
+          experiences, we can help you find the program that best fits your
+          needs! We work with high school students, so our programs are
+          available for those aged 15 to 18.
+        </p>
+        <div>
+          <p class="font-medium">Program durations available:</p>
+          <ul class="pl-5 list-disc">
+            <li>Full academic year: 10 months</li>
+            <li>Semester program: 5 months</li>
+            <li>Trimester: 3 months</li>
+          </ul>
+        </div>
+        <div class="space-y-3">
+          <p class="font-medium">
+            Program options available in several countries:
+          </p>
+          <p>
+            <span class="font-medium">1. Classic Program</span><br />In this
+            program, students are placed with host families and attend public
+            high schools. The major benefit of this program is that you’ll get
+            to deeply experience the culture and daily life of the country.
+            However, it's important to note that sports participation is not
+            guaranteed in this program.
+          </p>
+          <p>
+            <span class="font-medium">2. Select program</span><br />The Select
+            Program is similar to the Classic Program but offers more choices,
+            such as the location, subjects, and other preferences. Due to this
+            flexibility, the program is in a higher price range, but sports
+            participation is still not guaranteed.
+          </p>
+          <p>
+            <span class="font-medium">3. Boarding Program</span><br />Our
+            boarding school program is an excellent opportunity for students who
+            are focused and goal-oriented. In this program, there is no need for
+            a host family as students live in dormitories and attend the school
+            they have selected. This program is particularly popular among
+            athletes and students who wish to study at a university related to
+            their chosen high school. Costs vary depending on the school, as
+            tuition fees are set by each institution.
+          </p>
+        </div>
+        <div class="space-y-3">
+          <p class="font-medium">How we help:</p>
+          <p>
+            We charge a one-time consultancy fee of <span class="font-medium"
+              >4,000 USD + VAT</span
+            >.
+          </p>
+          <div>
+            <p class="font-medium">In return:</p>
+            <ul class="pl-5 list-disc">
+              <li>We select the schools that best fit your needs.</li>
+              <li>We present you with schools that match your preferences.</li>
+              <li>
+                Once your family chooses the preferred institution, we contact
+                the school and begin the enrollment process.
+              </li>
+              <li>
+                We offer support throughout the entire program and help resolve
+                any issues that may arise.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p>
+          Choose the international study program that suits you best and take
+          the first step toward a life-changing experience!
+        </p>
     `,
 
     "formError.required": "Required!",
@@ -244,7 +320,7 @@ export const ui = {
     "abroad.title": "Játékosok külföldre közvetítése",
     "abroad.subtitle":
       "Fiatal, tehetséges játékosokat segítünk külföldi egyetemi és profi ligákba való kijutásban.",
-    "abroad.content": `
+    "abroad.section1": `
         <p>
           A jelentkezők számára nem csak a sportkarrier áll a középpontban - lehetőséget biztosítunk arra is, hogy középiskolai vagy egyetemi tanulmányokat folytassanak, így egy teljes életpálya-modell mentén a diploma megszerzése is garantált.
         </p>
@@ -315,7 +391,72 @@ export const ui = {
               >
             </li>
           </ul>
-          <p class="pt-5">📩Lépj kapcsolatba velünk, és segítünk elindítani a nemzetközi karrieredet!</p>
+        </div>
+        <p class="pt-5">📩Lépj kapcsolatba velünk, és segítünk elindítani a nemzetközi karrieredet!</p>
+    `,
+    "abroad.section2": `
+        <p class="font-medium">Ebben is tudunk segíteni!</p>
+          <p>
+            Fedezd fel a lehetőségeket külföldi tanulmányi programjainkkal! Ha
+            középiskolás vagy, és szeretnél egyedülálló külföldi tapasztalatokat
+            szerezni, mi segítünk megtalálni a számodra legmegfelelőbb programot!
+            Középiskolásokkal foglalkozunk, így a programjaink a 15-18 éves
+            korosztály számára elérhetők.
+          </p>
+          <div>
+            <p class="font-medium">Választható időtartamok:</p>
+            <ul class="pl-5 list-disc">
+              <li>Teljes tanév: 10 hónap</li>
+              <li>Féléves program: 5 hónap</li>
+              <li>Trimeszter: 3 hónap</li>
+            </ul>
+          </div>
+          <div class="space-y-3">
+            <p class="font-medium">Program lehetőségek több országban:</p>
+            <p>
+              <span class="font-medium">1. Classic program</span><br />Ebben a
+              programban diákjainkat fogadó családoknál helyezzük el, és állami
+              középiskolába járnak. A program nagy előnye, hogy mélyebben
+              megismerheted az adott ország kultúráját és mindennapjait. Fontos
+              azonban megjegyezni, hogy ebben a programban nem garantált a
+              sportolási lehetőség.
+            </p>
+            <p>
+              <span class="font-medium">2. Select program</span><br />A Select
+              program hasonló a Classic programhoz, de több választási lehetőséget
+              kínál. A diákok kiválaszthatják a földrajzi elhelyezkedést, a
+              tantárgyakat, és más egyéni preferenciákat. Ez a rugalmasság miatt a
+              program magasabb árkategóriába esik, de a sport itt sem garantált.
+            </p>
+            <p>
+              <span class="font-medium">3. Boarding program</span><br />A
+              bentlakásos iskolai programunk kiváló lehetőség azok számára, akik
+              céltudatosan szeretnének tanulni. Ebben a programban nincs szükség
+              fogadó családra, mivel a diákok kollégiumban laknak, és saját
+              választásuk alapján az adott iskolába járnak. Ez a program különösen
+              népszerű sportolók, illetve azok körében, akik olyan egyetemre
+              szeretnének továbbtanulni, amely szorosan kötődik az általuk
+              választott középiskolához. A költségek iskolánként eltérnek, mivel a
+              tandíjat az adott intézmény határozza meg.
+            </p>
+          </div>
+          <div class="space-y-3">
+            <p class="font-medium">Hogyan segítünk?</p>
+            <p>Szolgáltatásunkért csak egy egyszeri tanácsadási díjat számolunk fel, amely <span class="font-medium">4.000 USD + ÁFA</span>.</p>
+            <div>
+              <p class="font-medium">Ezt követően:</p>
+              <ul class="pl-5 list-disc">
+                <li>Kiválasztjuk a számodra legmegfelelőbb iskolákat.</li>
+                <li>Bemutatjuk az iskolák közül azokat, amelyek leginkább megfelelnek az igényeidnek.</li>
+                <li>Miután a család kiválasztotta a megfelelő intézményt, felvesszük a kapcsolatot az iskolával, és elindítjuk a beiratkozási folyamatot.</li>
+                <li>A program teljes időtartama alatt támogatást nyújtunk, és segítünk megoldani minden felmerülő kérdést vagy problémát.</li>
+              </ul>
+            </div>
+          </div>
+
+          <p>
+            Válaszd ki a számodra legmegfelelőbb külföldi tanulmányi programot, és tedd meg az első lépést egy életre szóló élmény felé!
+          </p>
         </div>
     `,
 
