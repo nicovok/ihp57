@@ -1,10 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import {
-  getLangFromUrl,
-  staticPathsForMultilang,
-  useTranslations,
-} from "src/i18n/utils.ts";
+import { getLangFromUrl, useTranslations } from "src/i18n/utils.ts";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -12,22 +8,26 @@ const t = useTranslations(lang);
 
 <section class="relative">
   <Image
+    alt="jumbo"
     src="/images/home/jumbo.jpg"
-    alt="Jumbotron Image"
+    width={5974}
+    height={3983}
+    class="hidden md:block w-full aspect-[5/2] object-cover object-top"
+  />
+  <Image
+    alt="jumbo"
+    src="/images/home/jumbo_mobile.jpg"
     width={1934}
     height={1220}
-    class="object-cover w-screen max-h-[34rem] min-h-[18rem] background"
+    class="md:hidden w-full aspect-[3/2] sm:aspect-[2/1] object-cover object-top"
   />
   <div
-    class="absolute top-10 right-5 left-5 lg:left-16 lg:right-16 text-center md:text-left text-white box-content space-y-5 max-w-3xl"
+    class="absolute text-center top-10 left-0 bottom-0 sm:left-6 md:bottom-full md:top-10 md:text-left text-white"
   >
     <h1
-      class="font-bold text-4xl sm:text-5xl lg:text-6xl drop-shadow-md"
+      class="font-bold md:max-w-[50%] text-3xl sm:text-6xl lg:text-7xl drop-shadow-[0_1.5px_1.5px_rgba(0,0,0,1)]"
     >
       {t("home.banner.lead")}
     </h1>
-    <p class="font-normal text-lg lg:text-2xl drop-shadow-md">
-      {t("home.banner.description")}
-    </p>
   </div>
 </section>

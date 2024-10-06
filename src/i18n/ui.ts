@@ -234,6 +234,27 @@ export const ui = {
           the first step toward a life-changing experience!
         </p>
     `,
+    "abroad.section3": `
+        <p class="font-medium">🎯Do you want to play in Europe? We can help!🌍</p>
+        <p>
+          🏒 💥 Your opportunity: Join training camps, tryouts,
+          and take part in professional practices across Europe! 
+          Experience top-level development!
+        </p>
+        <div>
+          <p>✅ What do we offer?</p>
+          <ul class="pl-5 list-disc">
+            <li>Assistance with your transfer to Europe</li>
+            <li>Connection to training camps and tryouts</li>
+            <li>Opportunities to join practices</li>
+            <li>Support in securing a place in a local school</li>
+          </ul>
+        </div>
+        <p>
+          🏒 Don't miss the chance to achieve your dreams in Europe! <br />
+          📩 Contact us and start your journey to success!
+        </p>
+    `,
 
     "formError.required": "Required!",
     "formError.invalid": "Invalid!",
@@ -457,7 +478,27 @@ export const ui = {
           <p>
             Válaszd ki a számodra legmegfelelőbb külföldi tanulmányi programot, és tedd meg az első lépést egy életre szóló élmény felé!
           </p>
+    `,
+    "abroad.section3": `
+        <p class="font-medium">🎯Szeretnél Európában játszani? Mi segítünk!🌍</p>
+        <p>
+          🏒💥 Lehetőség számodra: Csatlakozz Európában edzőtáborokhoz, tryoutokhoz,
+          és vegyél részt profi edzéseken! Tapasztald meg a legmagasabb szintű
+          szakmai fejlődést!
+        </p>
+        <div>
+          <p>✅ Mit kínálunk?</p>
+          <ul class="pl-5 list-disc">
+            <li>Segítség az európai igazolásodhoz</li>
+            <li>Kapcsolatfelvétel edzőtáborokkal és tryoutokkal</li>
+            <li>Edzésekhez való csatlakozás lehetősége</li>
+            <li>Támogatás az itthoni iskolába való elhelyezkedéshez</li>
+          </ul>
         </div>
+        <p>
+          🏒 Ne hagyd ki a lehetőséget, hogy elérd álmaidat Európában! <br />
+          📩 Keress minket és indulj el a siker felé vezető úton!
+        </p>
     `,
 
     "formError.required": "Kötelező!",

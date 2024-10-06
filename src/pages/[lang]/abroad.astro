@@ -37,7 +37,7 @@ const t = useTranslations(lang);
         alt="Játékosközvetítés"
         width="4032"
         height="3024"
-        class="object-cover h-full hidden md:block"
+        class="object-cover h-full hidden lg:block"
       />
     </div>
     <div class="grid lg:grid-cols-2 bg-white">
@@ -52,6 +52,19 @@ const t = useTranslations(lang);
       <div class="space-y-6 px-3 sm:px-10 py-5 sm:py-10">
         <Fragment set:html={t("abroad.section2")} />
       </div>
+    </div>
+    <div class="grid lg:grid-cols-2 bg-white">
+      <div class="space-y-6 px-3 sm:px-10 py-5 sm:py-10 order-2 md:order-1">
+        <Fragment set:html={t("abroad.section3")} />
+      </div>
+
+      <Image
+        src="/images/management/third.jpg"
+        alt="Játékosközvetítés"
+        width="5657"
+        height="3771"
+        class="object-cover h-full min-h-[40rem] order-1 md:order-2"
+      />
     </div>
   </section>
   <!--         <div>

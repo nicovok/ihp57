@@ -26,12 +26,12 @@ const t = useTranslations(lang);
                     alt="Orbán Attila sitting at a desk."
                     width={1608}
                     height={1058}
-                    class="md:h-full w-full object-cover"
+                    class="md:h-full w-full object-cover min-h-[20rem]"
                 />
             </div>
             <div class="md:col-span-3 lg:col-span-2">
                 <div
-                    class="px-5 md:px-10 py-10 md:py-16 space-y-3 md:space-y-5"
+                    class="px-4 md:px-10 py-4 md:py-16 space-y-2 md:space-y-5"
                 >
                     <h2 class="text-2xl md:text-3xl font-bold uppercase">
                         {t('about.founder.name')}
@@ -46,7 +46,7 @@ const t = useTranslations(lang);
     </section>
     <section class="bg-neutral-100">
         <div
-            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 px-5 sm:px-10 py-12"
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 px-4 sm:px-10 py-6 md:py-12"
         >
             {coaches.map((coach) => <CoachCard {...{ coach }} />)}
         </div>
