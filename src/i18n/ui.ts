@@ -22,6 +22,7 @@ export const ui = {
     "nav.contact": "Contact",
     "nav.foundation": "Foundation",
     "nav.join-trainings": "Join us!",
+    "nav.products": "Products",
 
     notfound: "Page not found",
 
@@ -276,6 +277,7 @@ export const ui = {
     "nav.contact": "Kapcsolat",
     "nav.foundation": "Alapítvány",
     "nav.join-trainings": "Csatlakozok az edzésekhez!",
+    "nav.products": "Termékek",
 
     notfound: "Nincsen ilyen oldal",
 
