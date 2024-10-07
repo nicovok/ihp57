@@ -62,7 +62,7 @@ export const ui = {
     "foundation.ban": "Bank account number",
     "foundation.seat": "Seat",
 
-    "tournaments.descripton": "🏒 Hockey Tournament - Sign Up Now! 🏒 🔵",
+    "tournaments.descripton": "Hockey Tournament - Sign Up Now!",
     "tournaments.content": `
           <p class="font-medium text-lg">Calling All Boys and Girls U8-U18!</p>
           <p>
@@ -70,7 +70,7 @@ export const ui = {
             Teams can have a maximum of two or three lines, ensuring maximum playtime and intensity!
           </p>
           <div class="space-y-3">
-            <p class="font-medium">✅ What can you expect?</p>
+            <p class="font-medium">What can you expect?</p>
             <ul class="pl-5 space-y-1">
               <li>• High-level matches</li>
               <li>• Small rink and full rink challenges </li>
@@ -235,14 +235,14 @@ export const ui = {
         </p>
     `,
     "abroad.section3": `
-        <p class="font-medium">🎯Do you want to play in Europe? We can help!🌍</p>
+        <p class="font-medium">Do you want to play in Europe? We can help!</p>
         <p>
-          🏒 💥 Your opportunity: Join training camps, tryouts,
+          Your opportunity: Join training camps, tryouts,
           and take part in professional practices across Europe! 
           Experience top-level development!
         </p>
         <div>
-          <p>✅ What do we offer?</p>
+          <p>What do we offer?</p>
           <ul class="pl-5 list-disc">
             <li>Assistance with your transfer to Europe</li>
             <li>Connection to training camps and tryouts</li>
@@ -251,7 +251,7 @@ export const ui = {
           </ul>
         </div>
         <p>
-          🏒 Don't miss the chance to achieve your dreams in Europe! <br />
+          Don't miss the chance to achieve your dreams in Europe! <br />
           📩 Contact us and start your journey to success!
         </p>
     `,
@@ -316,7 +316,7 @@ export const ui = {
     "foundation.ban": "Bankszámlaszám",
     "foundation.seat": "Székhely",
 
-    "tournaments.description": "🏒 HokiTorna - Jelentkezz most! 🏒 🔵",
+    "tournaments.description": "HokiTorna - Jelentkezz most!",
     "tournaments.content": `
           <p class="font-medium text-lg">U8-U18 Fiúk és Lányok Figyelem!</p>
           <p>
@@ -326,7 +326,7 @@ export const ui = {
             a maximális játékélményt és intenzitást!
           </p>
           <div class="space-y-3">
-            <p class="font-medium">✅ Mi vár rád?</p>
+            <p class="font-medium">Mi vár rád?</p>
             <ul class="pl-5 space-y-1">
               <li>• Magas színvonalú mérkőzések</li>
               <li>• Kispályás és nagypályás kihívások</li>
@@ -480,14 +480,14 @@ export const ui = {
           </p>
     `,
     "abroad.section3": `
-        <p class="font-medium">🎯Szeretnél Európában játszani? Mi segítünk!🌍</p>
+        <p class="font-medium">Szeretnél Európában játszani? Mi segítünk!</p>
         <p>
-          🏒💥 Lehetőség számodra: Csatlakozz Európában edzőtáborokhoz, tryoutokhoz,
+          Lehetőség számodra: Csatlakozz Európában edzőtáborokhoz, tryoutokhoz,
           és vegyél részt profi edzéseken! Tapasztald meg a legmagasabb szintű
           szakmai fejlődést!
         </p>
         <div>
-          <p>✅ Mit kínálunk?</p>
+          <p>Mit kínálunk?</p>
           <ul class="pl-5 list-disc">
             <li>Segítség az európai igazolásodhoz</li>
             <li>Kapcsolatfelvétel edzőtáborokkal és tryoutokkal</li>
@@ -496,7 +496,7 @@ export const ui = {
           </ul>
         </div>
         <p>
-          🏒 Ne hagyd ki a lehetőséget, hogy elérd álmaidat Európában! <br />
+          Ne hagyd ki a lehetőséget, hogy elérd álmaidat Európában! <br />
           📩 Keress minket és indulj el a siker felé vezető úton!
         </p>
     `,
