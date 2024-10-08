@@ -80,6 +80,6 @@ export const products: Product[] = [
   },
   {
     name: { hu: "Babzsák", en: "Beanbag" },
-    img: "/images/products/baseball.png",
+    img: "/images/products/beanbag.png",
   },
 ];
