@@ -23,19 +23,19 @@ export const products: Product[] = [
     img: "/images/products/hoodie-red.png",
   },
   {
-    name: { hu: "Fekete Galléros Pulcsi", en: "Black Sweater" },
+    name: { hu: "Fekete Hosszúujjú Póló", en: "Black Long Sleeve T-Shirt" },
     img: "/images/products/sweater-black.png",
   },
   {
-    name: { hu: "Piros Galléros Pulcsi", en: "Red Sweater" },
+    name: { hu: "Piros Hosszúujjú Póló", en: "Red Long Sleeve T-Shirt" },
     img: "/images/products/sweater-red.png",
   },
   {
-    name: { hu: "Fehér Póló", en: "White T-Shirt" },
+    name: { hu: "Fehér Edzés Póló", en: "White T-Shirt" },
     img: "/images/products/tshirt-white.png",
   },
   {
-    name: { hu: "Sárga Póló", en: "Yellow T-Shirt" },
+    name: { hu: "Sárga Edzés Póló", en: "Yellow T-Shirt" },
     img: "/images/products/tshirt-yellow.png",
   },
   {
@@ -67,7 +67,19 @@ export const products: Product[] = [
     img: "/images/products/beanie.png",
   },
   {
+    name: { hu: "Téli Sapka 2", en: "Beanie 2" },
+    img: "/images/products/beanie2.png",
+  },
+  {
+    name: { hu: "Téli Sapka 3", en: "Beanie 3" },
+    img: "/images/products/beanie3.png",
+  },
+  {
     name: { hu: "Baseball Sapka", en: "Baseball Hat" },
+    img: "/images/products/baseball.png",
+  },
+  {
+    name: { hu: "Babzsák", en: "Beanbag" },
     img: "/images/products/baseball.png",
   },
 ];
