@@ -47,6 +47,10 @@ export const products: Product[] = [
     img: "/images/products/sweatpants-black.png",
   },
   {
+    name: { hu: "Zokni", en: "Socks" },
+    img: "/images/products/socks.png",
+  },
+  {
     name: { hu: "Fekete Törölköző", en: "Towel Black" },
     img: "/images/products/towel-black.png",
   },
@@ -57,6 +61,10 @@ export const products: Product[] = [
   {
     name: { hu: "Hátizsák", en: "Backpack" },
     img: "/images/products/backpack.png",
+  },
+  {
+    name: { hu: "Tornazsák", en: "Rawstring Bag" },
+    img: "/images/products/rawstring.png",
   },
   {
     name: { hu: "Kabát", en: "Jacket" },
