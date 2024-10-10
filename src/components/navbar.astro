@@ -52,6 +52,16 @@ const [, , ...clearPath] = Astro.url.pathname.split("/");
       </a>
       <a
         class={`${
+          clearPath[0] == "products"
+            ? "underline decoration-primary"
+            : "hover:underline decoration-black"
+        } underline-offset-4 decoration-2`}
+        href={`/${lang}/products`}
+      >
+        {t("nav.products")}
+      </a>
+      <a
+        class={`${
           clearPath[0] == "about"
             ? "underline decoration-primary"
             : "hover:underline decoration-black"
@@ -71,7 +81,7 @@ const [, , ...clearPath] = Astro.url.pathname.split("/");
   <div class="flex gap-4 items-center">
     <LangSwitch />
     <a href={`/${lang}/contact`}>
-      <button class="border border-black px-4 py-2"
+      <button class="hidden xl:block border border-black px-4 py-2"
         >{t("nav.join-trainings")}
       </button>
     </a>

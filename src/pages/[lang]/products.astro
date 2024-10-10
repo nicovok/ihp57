@@ -16,19 +16,25 @@ const t = useTranslations(lang);
 ---
 
 <DefaultLayout title={t("nav.products")}>
-  <section class="bg-neutral-100">
-    <div class="px-5 lg:px-10 py-5 bg-neutral-200">
+  <section>
+    <div class="px-5 lg:px-10 py-5 bg-neutral-100">
       <h1 class="text-4xl font-bold">{t("nav.products")}</h1>
     </div>
-    <div class="px-5 lg:px-10 py-5 grid md:grid-cols-2 lg:grid-cols-3 gap-2">
+    <div class="text-lg space-y-2 px-5 lg:px-10 py-5 bg-white">
+      <p>{t("products.order")}</p>
+      <p>{t("products.pickup")}</p>
+    </div>
+    <div class="px-5 lg:px-10 py-5 grid md:grid-cols-2 lg:grid-cols-3 gap-2 bg-neutral-100">
       {
         products.map((product) => (
           <div class="flex flex-col bg-white border border-black divide-y divide-black">
-            <img
-              src={product.img}
-              alt={product.name[lang]}
-              class="max-w-md w-full flex-grow"
-            />
+            <div class="flex-grow">
+              <img
+                src={product.img}
+                alt={product.name[lang]}
+                class="w-full"
+              />
+            </div>
             <p class="p-4 text-xl font-medium">{product.name[lang]}</p>
           </div>
         ))

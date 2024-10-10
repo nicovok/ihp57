@@ -257,6 +257,9 @@ export const ui = {
         </p>
     `,
 
+    "products.order": "Order placement: products@icehockeypro57.com",
+    "products.pickup": "Order pickup: At the next training.",
+
     "formError.required": "Required!",
     "formError.invalid": "Invalid!",
     "formError.minlen": "Not long enough.",
@@ -502,6 +505,9 @@ export const ui = {
           📩 Keress minket és indulj el a siker felé vezető úton!
         </p>
     `,
+
+    "products.order": "Rendelés felvétel: products@icehockeypro57.com",
+    "products.pickup": "Rendelés átvétele: A következő edzésen.",
 
     "formError.required": "Kötelező!",
     "formError.invalid": "Érvénytelen!",
