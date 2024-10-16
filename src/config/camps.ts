@@ -25,8 +25,8 @@ export const camps: Camp[] = [
       en: "Goalie Camps",
     },
     description: {
-      hu: "Kapus fejlesztő tábor két turnusban, öt napon át. Június 30. - Július 4. és Július 7. - Július 11.",
-      en: "Goalkeeper development camp in two sessions over five days. 30 June - 4 July and 7 July - 11 July.",
+      hu: "Kapus fejlesztő tábor két turnusban, öt napon át. Június 23. - Június 27. és Június 30. - Július 4.",
+      en: "Goalkeeper development camp in two sessions over five days. June 23 - June 27 and 30 June - 4 July",
     },
     image: "/images/camps/goalie.jpg",
     link: "https://forms.gle/yf3iXiQ8aSFfvJzq7",
