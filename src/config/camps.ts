@@ -21,6 +21,18 @@ export const camps: Camp[] = [
   },
   {
     name: {
+      hu: "Nyári Táborok 2025",
+      en: "Summer Camps 2025",
+    },
+    description: {
+      hu: "Egész nyáron IHP57 tábor, 6 turnusban. Jelentkezz az alábbi gombra kattintva!",
+      en: "IHP57 camp throughout the whole summer, in 6 rounds. Register by clicking the button below!",
+    },
+    image: "/images/camps/summer.jpg",
+    link: "https://forms.gle/HC5JqxzGjDpRs7RT9",
+  },
+  {
+    name: {
       hu: "Kapus Táborok",
       en: "Goalie Camps",
     },
