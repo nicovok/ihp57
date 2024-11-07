@@ -21,6 +21,30 @@ export const camps: Camp[] = [
   },
   {
     name: {
+      hu: "Téli Tábor 2024",
+      en: "Winter Camp 2024",
+    },
+    description: {
+      hu: "Téli skill tábor az ünnepek között. (december 27. - 31.)",
+      en: "Winter skills camp between holidays. (December 27 - 31)",
+    },
+    image: "/images/camps/winter.jpg",
+    link: "https://forms.gle/KYZTkoypHwf3fW6r8",
+  },
+  {
+    name: {
+      hu: "Tavaszi Tábor 2025",
+      en: "Spring Camp 2025",
+    },
+    description: {
+      hu: "Tavaszi skill tábor az iskolai szünetben. (április 22. - 27.)",
+      en: "Spring skills camp during the school holidays. (April 22 - 27)",
+    },
+    image: "/images/camps/spring.jpg",
+    link: "https://forms.gle/su6UQevYjFv1afw56",
+  },
+  {
+    name: {
       hu: "Nyári Táborok 2025",
       en: "Summer Camps 2025",
     },
