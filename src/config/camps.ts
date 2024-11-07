@@ -21,8 +21,8 @@ export const camps: Camp[] = [
   },
   {
     name: {
-      hu: "Téli Tábor 2025",
-      en: "Winter Camp 2025",
+      hu: "Téli Tábor 2024",
+      en: "Winter Camp 2024",
     },
     description: {
       hu: "Téli skill tábor az ünnepek között. (december 27. - 31.)",
