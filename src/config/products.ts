@@ -31,11 +31,19 @@ export const products: Product[] = [
     img: "/images/products/sweater-red.png",
   },
   {
-    name: { hu: "Fehér Edzés Póló", en: "White T-Shirt" },
+    name: { hu: "Fehér Póló", en: "White T-Shirt" },
     img: "/images/products/tshirt-white.png",
   },
   {
-    name: { hu: "Sárga Edzés Póló", en: "Yellow T-Shirt" },
+    name: { hu: "Fekete Póló", en: "Black T-Shirt" },
+    img: "/images/products/tshirt-black.png",
+  },
+  {
+    name: { hu: "Piros Póló", en: "Red T-Shirt" },
+    img: "/images/products/tshirt-red.png",
+  },
+  {
+    name: { hu: "Sárga Póló", en: "Yellow T-Shirt" },
     img: "/images/products/tshirt-yellow.png",
   },
   {
@@ -63,7 +71,15 @@ export const products: Product[] = [
     img: "/images/products/backpack.png",
   },
   {
-    name: { hu: "Tornazsák", en: "Rawstring Bag" },
+    name: { hu: "Fekete Tornazsák", en: "Black Rawstring Bag" },
+    img: "/images/products/rawstring-black.png",
+  },
+  {
+    name: { hu: "Piros Tornazsák", en: "Red Rawstring Bag" },
+    img: "/images/products/rawstring-red.png",
+  },
+  {
+    name: { hu: "Prémium Tornazsák", en: "Premium Rawstring Bag" },
     img: "/images/products/rawstring.png",
   },
   {
