@@ -99,6 +99,10 @@ export const products: Product[] = [
     img: "/images/products/beanie3.png",
   },
   {
+    name: { hu: "Bögre", en: 'Mug' },
+    img: "/images/products/mug.png",
+  },
+  {
     name: { hu: "Baseball Sapka", en: "Baseball Hat" },
     img: "/images/products/baseball.png",
   },
