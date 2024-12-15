@@ -46,11 +46,69 @@ export const products: Product[] = [
   {
     name: { hu: "Fekete Pulcsi", en: "Black Hoodie" },
     img: "/images/products/hoodie-black.png",
-    sizes: "XS,S,M,L,XL",
+    sizes: "S,M,L,XL,2XL,3XL,4XL,5XL",
     description: `
-      <table class="[&>*]:p-2 divide divide divide-neutral-600">
+      <ul class="list-disc pl-5">
+        <li>71.0 g/m2 (White 257 g/m2)</li>
+        <li>50% pamut / 50% poliészter</li>
+        <li>Air jet fonal = puhább tapintás és bolyhosodás mentes</li>
+        <li>Kétrétegű kapucni, színazonos húzózsinórral</li>
+        <li>Dupla tűzésű derékrész, vállrész, nyak-és karkivágás</li>
+        <li>Kenguru zseb</li>
+        <li>1x1 Rib kötés, spandex</li>
+        <li>Gyűrődésmentesítő behajtás</li>
+      </ul>
+
+      <table>
         <tr>
-          <th></th>
+          <th>Felnőtt</th>
+          <th>S</th>
+          <th>M</th>
+          <th>L</th>
+          <th>XL</th>
+          <th>2XL</th>
+          <th>3XL</th>
+          <th>4XL</th>
+          <th>5XL</th>
+        </tr>
+        <tr>
+          <td>Testhossz</td>
+          <td>68.58</td>
+          <td>71.12</td>
+          <td>73.66</td>
+          <td>76.20</td>
+          <td>78.74</td>
+          <td>81.28</td>
+          <td>83.82</td>
+          <td>86.36</td>
+        </tr>
+        <tr>
+          <td>Mellbőség</td>
+          <td>50.80</td>
+          <td>55.88</td>
+          <td>60.96</td>
+          <td>66.04</td>
+          <td>71.12</td>
+          <td>76.20</td>
+          <td>81.28</td>
+          <td>86.36</td>
+        </tr>
+        <tr>
+          <td>Ujjhossz</td>
+          <td>85.09</td>
+          <td>87.63</td>
+          <td>90.17</td>
+          <td>92.71</td>
+          <td>95.25</td>
+          <td>97.79</td>
+          <td>100.33</td>
+          <td>102.87</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <th>Gyermek</th>
           <th>XS</th>
           <th>S</th>
           <th>M</th>
@@ -87,6 +145,101 @@ export const products: Product[] = [
   {
     name: { hu: "Piros Pulcsi", en: "Red Hoodie" },
     img: "/images/products/hoodie-red.png",
+    sizes: "S,M,L,XL,2XL,3XL,4XL,5XL",
+    description: `
+      <ul class="list-disc pl-5">
+        <li>71.0 g/m2 (White 257 g/m2)</li>
+        <li>50% pamut / 50% poliészter</li>
+        <li>Air jet fonal = puhább tapintás és bolyhosodás mentes</li>
+        <li>Kétrétegű kapucni, színazonos húzózsinórral</li>
+        <li>Dupla tűzésű derékrész, vállrész, nyak-és karkivágás</li>
+        <li>Kenguru zseb</li>
+        <li>1x1 Rib kötés, spandex</li>
+        <li>Gyűrődésmentesítő behajtás</li>
+      </ul>
+
+      <table>
+        <tr>
+          <th>Felnőtt</th>
+          <th>S</th>
+          <th>M</th>
+          <th>L</th>
+          <th>XL</th>
+          <th>2XL</th>
+          <th>3XL</th>
+          <th>4XL</th>
+          <th>5XL</th>
+        </tr>
+        <tr>
+          <td>Testhossz</td>
+          <td>68.58</td>
+          <td>71.12</td>
+          <td>73.66</td>
+          <td>76.20</td>
+          <td>78.74</td>
+          <td>81.28</td>
+          <td>83.82</td>
+          <td>86.36</td>
+        </tr>
+        <tr>
+          <td>Mellbőség</td>
+          <td>50.80</td>
+          <td>55.88</td>
+          <td>60.96</td>
+          <td>66.04</td>
+          <td>71.12</td>
+          <td>76.20</td>
+          <td>81.28</td>
+          <td>86.36</td>
+        </tr>
+        <tr>
+          <td>Ujjhossz</td>
+          <td>85.09</td>
+          <td>87.63</td>
+          <td>90.17</td>
+          <td>92.71</td>
+          <td>95.25</td>
+          <td>97.79</td>
+          <td>100.33</td>
+          <td>102.87</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <th>Gyermek</th>
+          <th>XS</th>
+          <th>S</th>
+          <th>M</th>
+          <th>L</th>
+          <th>XL</th>
+        </tr>
+        <tr>
+          <td>Testhossz</td>
+          <td>50.17</td>
+          <td>50.17</td>
+          <td>53.98</td>
+          <td>57.15</td>
+          <td>60.96</td>
+        </tr>
+        <tr>
+          <td>Mellbőség</td>
+          <td>40.64</td>
+          <td>40.64</td>
+          <td>43.18</td>
+          <td>45.72</td>
+          <td>48.26</td>
+        </tr>
+        <tr>
+          <td>Ujjhossz</td>
+          <td>59.69</td>
+          <td>59.69</td>
+          <td>67.31</td>
+          <td>70.49</td>
+          <td>76.84</td>
+        </tr>
+      </table>
+    `,
   },
   {
     name: { hu: "Fekete Hosszúujjú Póló", en: "Black Long Sleeve T-Shirt" },
