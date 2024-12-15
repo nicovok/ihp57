@@ -1,0 +1,68 @@
+---
+import type { GetStaticPaths } from "astro";
+import {
+  getProductFromSlug,
+  getProductSlug,
+  products,
+} from "src/config/products";
+import { ui } from "src/i18n/ui";
+import { useTranslations } from "src/i18n/utils";
+import { getLangFromUrl } from "src/i18n/utils";
+
+import BareLayout from "src/layouts/BareLayout.astro";
+
+export const prerender = true;
+export const getStaticPaths = (() => {
+  const res = Object.keys(ui).flatMap((lang) =>
+    products.map((product, id) => ({
+      params: { lang, slug: getProductSlug(id) },
+    }))
+  );
+  console.log(res);
+  return res;
+}) satisfies GetStaticPaths;
+
+const { slug } = Astro.params;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const product = getProductFromSlug(slug)!;
+---
+
+<BareLayout>
+  <title slot="head">{product.name[lang]}</title>
+
+  <div class="relative w-screen h-screen bg-neutral-100">
+    <div
+      class="fixed inset-0 md:inset-5 lg:inset-10 bg-white shadow p-5 overflow-scroll border-2 border-white"
+    >
+      <a
+        href={`/${lang}/products#${slug}`}
+        class="absolute top-5 right-5 lg:top-2 lg:right-2"
+      >
+        <button>
+          <img src="/icons/close.svg" class="w-8 md:w-10" />
+        </button>
+      </a>
+
+      <div>
+        <p class="text-2xl md:text-4xl font-bold">{product.name[lang]}</p>
+        {
+          product.sizes && (
+            <p class="text-lg text-neutral-500">
+              {product.sizes.split(",").join(" ")}
+            </p>
+          )
+        }
+      </div>
+
+      <div class="w-full">
+        <img src={product.img} class="mx-auto h-full" />
+      </div>
+
+      <div class="md:text-xl">
+        <Fragment set:html={product.description} />
+      </div>
+    </div>
+  </div>
+</BareLayout>

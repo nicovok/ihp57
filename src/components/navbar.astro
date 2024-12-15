@@ -1,13 +1,11 @@
 ---
 import { getLangFromUrl, useTranslations } from "src/i18n/utils";
 
-import MobileNavbar from "./mobile-navbar.astro";
 import LangSwitch from "./lang-switch.astro";
+import NavbarElement from "./navbar-element.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-
-const [, , ...clearPath] = Astro.url.pathname.split("/");
 ---
 
 <div
@@ -16,66 +14,13 @@ const [, , ...clearPath] = Astro.url.pathname.split("/");
   <div class="flex gap-2 items-center">
     <img src="/images/logo.svg" class="aspect-square w-16" />
     <nav class="hidden lg:block space-x-4">
-      <a
-        class={`${
-          clearPath[0] == ""
-            ? "underline decoration-primary"
-            : "hover:underline decoration-black"
-        } underline-offset-4 decoration-2`}
-        href={`/${lang}/`}>{t("nav.home")}</a
-      >
-      <a
-        class={`${
-          clearPath[0] == "camps"
-            ? "underline decoration-primary"
-            : "hover:underline decoration-black"
-        } underline-offset-4 decoration-2`}
-        href={`/${lang}/camps`}>{t("nav.camps")}</a
-      >
-      <a
-        class={`${
-          clearPath[0] == "tournaments"
-            ? "underline decoration-primary"
-            : "hover:underline decoration-black"
-        } underline-offset-4 decoration-2`}
-        href={`/${lang}/tournaments`}>{t("nav.tournaments")}</a
-      >
-      <a
-        class={`${
-          clearPath[0] == "abroad"
-            ? "underline decoration-primary"
-            : "hover:underline decoration-black"
-        } underline-offset-4 decoration-2`}
-        href={`/${lang}/abroad`}
-      >
-        {t("nav.abroad")}
-      </a>
-      <a
-        class={`${
-          clearPath[0] == "products"
-            ? "underline decoration-primary"
-            : "hover:underline decoration-black"
-        } underline-offset-4 decoration-2`}
-        href={`/${lang}/products`}
-      >
-        {t("nav.products")}
-      </a>
-      <a
-        class={`${
-          clearPath[0] == "about"
-            ? "underline decoration-primary"
-            : "hover:underline decoration-black"
-        } underline-offset-4 decoration-2`}
-        href={`/${lang}/about`}>{t("nav.about")}</a
-      >
-      <a
-        class={`${
-          clearPath[0] == "contact"
-            ? "underline decoration-primary"
-            : "hover:underline"
-        } hover:underline underline-offset-4 decoration-2`}
-        href={`/${lang}/contact`}>{t("nav.contact")}</a
-      >
+      <NavbarElement href="" name={t("nav.home")} />
+      <NavbarElement href="camps" name={t("nav.camps")} />
+      <NavbarElement href="tournaments" name={t("nav.tournaments")} />
+      <NavbarElement href="abroad" name={t("nav.abroad")} />
+      <NavbarElement href="products" name={t("nav.products")} />
+      <NavbarElement href="about" name={t("nav.about")} />
+      <NavbarElement href="contact" name={t("nav.contact")} />
     </nav>
   </div>
   <div class="flex gap-4 items-center">

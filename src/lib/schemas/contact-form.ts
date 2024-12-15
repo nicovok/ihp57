@@ -1,4 +1,6 @@
-import { z } from 'zod';
+import * as _z from 'zod';
+
+const z = _z.default;
 
 export const contactFormSchema = z.object(
     {
@@ -9,7 +11,7 @@ export const contactFormSchema = z.object(
             message: 'formError.invalid',
         }),
     },
-    { required_error: 'formError.required' }
+    {required_error: 'formError.required'}
 );
 
 export type ContactFormSchema = z.infer<

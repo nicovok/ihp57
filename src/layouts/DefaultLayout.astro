@@ -25,9 +25,13 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
+<slot name="head" slot="head" />
+
 <BareLayout>
-  <title slot="head">{title} | hockeypro57</title>
-  <meta slot="head" property="og:title" content={title} />
+  <Fragment slot="head">
+    <title>{title} | hockeypro57</title>
+    <meta property="og:title" content={title} />
+  </Fragment>
 
   <div class="max-w-screen-2xl mx-auto bg-white shadow-md">
     <Navbar />
