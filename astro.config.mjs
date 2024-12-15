@@ -11,16 +11,19 @@ export default defineConfig({
   site: "https://icehockeypro57.com",
   integrations: [tailwind(), react(), sitemap()],
   output: "server",
+  prefetch: {
+    defaultStrategy: "viewport",
+  },
   adapter: vercel({
     imageService: true,
     webAnalytics: {
-      enabled: true
+      enabled: true,
     },
     speedInsights: {
-      enabled: true
-    }
+      enabled: true,
+    },
   }),
   redirects: {
-    "/": "/" + defaultLang + "/"
-  }
+    "/": "/" + defaultLang + "/",
+  },
 });
