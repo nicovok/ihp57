@@ -1,29 +1,29 @@
 ---
-import { getLangFromUrl, useTranslations } from 'src/i18n/utils';
-import { services as _services } from 'src/config/services';
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+import { services as _services } from "src/config/services";
 
-import { ServicesCarousel } from './services-carousel';
-import { Image } from 'astro:assets';
+import { ServicesCarousel } from "./services-carousel";
+import { Image } from "astro:assets";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const services = _services.map((service) => ({
-    lead: service.lead[lang],
-    text: service.text[lang],
+  lead: service.lead[lang],
+  text: service.text[lang],
 }));
 ---
 
 <section class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-0">
-    <div class="px-5 md:px-10 py-8 my-auto">
-        <ServicesCarousel client:idle {...{ services }} />
-    </div>
-    <Image
-        id="services-image"
-        src="/images/home/services/2.jpg"
-        alt="Services"
-        width={3024}
-        height={2928}
-        class="object-cover aspect-[3/5] md:aspect-square w-full h-full"
-    />
+  <div class="px-5 md:px-10 py-8 my-auto">
+    <ServicesCarousel client:visible {...{ services }} />
+  </div>
+  <Image
+    id="services-image"
+    src="/images/home/services/2.jpg"
+    alt="Services"
+    width={3024}
+    height={2928}
+    class="object-cover aspect-[3/5] md:aspect-square w-full h-full"
+  />
 </section>

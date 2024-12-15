@@ -4,9 +4,10 @@ import { getLangFromUrl } from "src/i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 
-const [, , ...clearPath] = Astro.url.pathname.split('/');
-const nextLang = lang == 'hu' ? 'en' : 'hu';
+const [, , ...clearPath] = Astro.url.pathname.split("/");
+const nextLang = lang == "hu" ? "en" : "hu";
 const langLabel = languages[nextLang];
-const urlOnNextLang = `/${nextLang}/${clearPath.join('/')}`;
+const urlOnNextLang = `/${nextLang}/${clearPath.join("/")}`;
 ---
-<a href={urlOnNextLang}>{langLabel}</a>
+
+<a href={urlOnNextLang} data-astro-prefetch>{langLabel}</a>

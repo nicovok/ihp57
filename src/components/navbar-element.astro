@@ -1,0 +1,26 @@
+---
+import { ui } from "src/i18n/ui";
+import { getLangFromUrl } from "src/i18n/utils";
+
+interface Props {
+  href: string;
+  name: string;
+}
+
+const { href, name } = Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
+const [, , ...clearPath] = Astro.url.pathname.split("/");
+---
+
+<a
+  class={`${
+    clearPath[0] == href
+      ? "underline decoration-primary"
+      : "hover:underline decoration-black"
+  } underline-offset-4 decoration-2`}
+  href={"/" + lang + "/" + href}
+  data-astro-prefetch
+>
+  {name}
+</a>

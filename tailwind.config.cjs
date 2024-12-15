@@ -23,5 +23,18 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwind-scrollbar-hide")],
+  plugins: [
+    require("tailwind-scrollbar-hide"),
+    function ({ addComponents, theme }) {
+      addComponents({
+        table: {
+          marginTop: theme("spacing.10"),
+        },
+        "th,td": {
+          border: "1px solid black",
+          padding: theme("spacing.2"),
+        },
+      });
+    },
+  ],
 };

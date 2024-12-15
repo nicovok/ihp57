@@ -1,25 +1,25 @@
 ---
-import { getLangFromUrl, useTranslations } from 'src/i18n/utils';
-import { reviews as _reviews } from 'src/config/reviews';
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+import { reviews as _reviews } from "src/config/reviews";
 
-import { ReviewsCarousel } from './reviews-carousel';
+import { ReviewsCarousel } from "./reviews-carousel";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const reviews = _reviews.map((review) => ({
-    text: review.text[lang],
-    author: review.author[lang],
+  text: review.text[lang],
+  author: review.author[lang],
 }));
 ---
 
 <div class="flex justify-center text-center py-20 px-5 bg-neutral-100">
-    <div class="space-y-14">
-        <p class="uppercase font-bold text-4xl">
-            {t('home.reviews.lead')}
-        </p>
-        <div>
-            <ReviewsCarousel client:load reviews={reviews} />
-        </div>
+  <div class="space-y-14">
+    <p class="uppercase font-bold text-4xl">
+      {t("home.reviews.lead")}
+    </p>
+    <div>
+      <ReviewsCarousel client:visible reviews={reviews} />
     </div>
+  </div>
 </div>
