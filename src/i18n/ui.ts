@@ -7,6 +7,8 @@ export const defaultLang = "hu";
 
 export const ui = {
   en: {
+    "basics.month": "month",
+
     "seo.ogtitle": "Talent fostering for ambitious players.",
     "seo.ogdescription":
       "Modern training programs for your development from the start. We support your professional career.",
@@ -23,6 +25,7 @@ export const ui = {
     "nav.foundation": "Foundation",
     "nav.join-trainings": "Join us!",
     "nav.products": "Products",
+    "nav.career_dev": "Career Development",
 
     notfound: "Page not found",
 
@@ -63,7 +66,7 @@ export const ui = {
     "foundation.ban": "Bank account number",
     "foundation.seat": "Seat",
 
-    "tournaments.descripton": "Hockey Tournament - Sign Up Now!",
+    "tournaments.description": "Hockey Tournament - Sign Up Now!",
     "tournaments.content": `
           <p class="font-medium text-lg">Calling All Boys and Girls U8-U18!</p>
           <p>
@@ -260,11 +263,21 @@ export const ui = {
     "products.order": "Order placement: products@icehockeypro57.com",
     "products.pickup": "Order pickup: At the next training.",
 
+    "career.title": "Ice Hockey Career Development Packages",
+    "career.description":
+      "Building an ice hockey career is not just about technical skills, but also about achieving the set goals at the right time, in the right place, and with the right support. For years, we have been working to help the best players build their international careers. We have role models like Ferenc Karsai and Matyi Czabafy, who, through years of hard work and with the support of our professional team, are now key players for the best team in Finland, Jokerit! Our goal is to provide every player with the best opportunities to achieve their dreams and elevate their careers to the highest level.",
+    "career.shorter":
+      "If you don’t want a full year commitment, there is an option for a 4-month program, which is an additional 5000 HUF more than the selected package. This also provides an opportunity to support the players’ professional development while offering a more flexible solution for those who want to work on a shorter-term basis.",
+    "career.contact":
+      "Feel free to contact us, and we will help you select the most suitable program!",
+
     "formError.required": "Required!",
     "formError.invalid": "Invalid!",
     "formError.minlen": "Not long enough.",
   },
   hu: {
+    "basics.month": "hónap",
+
     "seo.ogtitle": "Tehetséggondozás, célratörő játékosoknak!",
     "seo.ogdescription":
       "Modern edzésprogramok a fejlődésedhez, a kezdetektől. Professzionális karriered támogatói vagyunk!",
@@ -281,6 +294,7 @@ export const ui = {
     "nav.foundation": "Alapítvány",
     "nav.join-trainings": "Csatlakozok az edzésekhez!",
     "nav.products": "Termékek",
+    "nav.career_dev": "Karrierfejlesztés",
 
     notfound: "Nincsen ilyen oldal",
 
@@ -508,6 +522,14 @@ export const ui = {
 
     "products.order": "Rendelés felvétel: products@icehockeypro57.com",
     "products.pickup": "Rendelés átvétele: A következő edzésen.",
+
+    "career.title": "Jégkorong Karrier Fejlesztő Csomagok",
+    "career.description":
+      "A jékorong karrier építése nem csak a technikai tudásról szól, hanem arról is, hogy a megfelelő időben, a megfelelő helyen és a megfelelő támogatással érjük el a kitűzött célokat. Mi évek óta azon dolgozunk, hogy a legjobb játékosokat a nemzetközi szintű karrierhez segítjük. Olyan példaképeink vannak, mint Karsai Ferenc és Czabafy Matyi, akik a hosszú évek kemény munkájával és a szakmai csapatunk segítségével ma már a Finnország legjobb csapatában, a Jokeritnél meghatározó játékosok! A célunk, hogy minden játékos számára biztosítjuk a legjobb lehetőséget, hogy elérje álmait és a legmagasabb szintre emelje karrierjét.",
+    "career.shorter":
+      "Ha nem szeretnétek az egész éves elköteleződést, akkor lehetőség van 4 hónapos program igénybevételére is, amely a választott csomag 5000 Ft-tal drágább változata. Ez is lehetőséget ad arra, hogy a játékosok szakmai fejlődését segítse, miközben rugalmasabb megoldást kínál azok számára, akik rövidebb távon szeretnének dolgozni.",
+    "career.contact":
+      "Keressetek minket bizalommal, és segítünk a legmegfelelőbb program kiválasztásában!",
 
     "formError.required": "Kötelező!",
     "formError.invalid": "Érvénytelen!",
