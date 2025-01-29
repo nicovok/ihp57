@@ -53,11 +53,22 @@ const urlOnNextLang = `/${nextLang}/${clearPath.join("/")}`;
           </span>
           <img src="/icons/arrow-right.svg" class="h-6" /></a
         >
-        <a href={`/${lang}/tournaments`} class="flex justify-between items-center">
+        <a
+          href={`/${lang}/tournaments`}
+          class="flex justify-between items-center"
+        >
           <span
             class="focus:underline hover:underline underline-offset-2 decoration-2"
           >
             {t("nav.tournaments")}
+          </span>
+          <img src="/icons/arrow-right.svg" class="h-6" /></a
+        >
+        <a href={`/${lang}/career`} class="flex justify-between items-center">
+          <span
+            class="focus:underline hover:underline underline-offset-2 decoration-2"
+          >
+            {t("nav.career_dev")}
           </span>
           <img src="/icons/arrow-right.svg" class="h-6" /></a
         >

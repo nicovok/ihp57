@@ -1,0 +1,53 @@
+---
+import {
+  getLangFromUrl,
+  staticPathsForMultilang,
+  useTranslations,
+} from "src/i18n/utils";
+import DefaultLayout from "src/layouts/DefaultLayout.astro";
+
+import { careerPackages } from "src/config/career";
+
+export const prerender = true;
+export const getStaticPaths = staticPathsForMultilang();
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<DefaultLayout title={t("nav.career_dev")}>
+  <div class="px-3 sm:px-10 py-5 bg-neutral-100">
+    <h1 class="text-3xl lg:text-4xl font-bold">
+      {t("career.title")}
+    </h1>
+  </div>
+  <div class="bg-white px-3 sm:px-10 py-5">
+    <p>
+      {t("career.description")}
+    </p>
+  </div>
+  <div class="px-3 sm:px-10 py-5 bg-neutral-100 space-y-5">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-3">
+      {
+        careerPackages.map((v) => (
+          <div class="bg-white flex flex-col shadow-sm p-3">
+            <p class="uppercase font-semibold text-2xl">{v.name[lang]}</p>
+            <hr class="my-2 border-primary border-2 w-10" />
+            <ul class="list-disc pl-4 flex-grow">
+              {v.points[lang].map((p) => (
+                <li>{p}</li>
+              ))}
+            </ul>
+            <p class="text-xl text-right font-bold mt-5">
+              {v.price} Ft / {t("basics.month")}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+    <div class="space-y-5">
+      <p class="text-sm">**{t("career.shorter")}</p>
+      <p class="text-xl">{t("career.contact")} <br />hello@icehockeypro57.hu</p>
+    </div>
+  </div>
+</DefaultLayout>
