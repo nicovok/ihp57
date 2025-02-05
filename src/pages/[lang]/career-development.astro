@@ -1,12 +1,12 @@
 ---
 import {
-  getLangFromUrl,
-  staticPathsForMultilang,
-  useTranslations,
-} from "src/i18n/utils";
-import DefaultLayout from "src/layouts/DefaultLayout.astro";
+    getLangFromUrl,
+    staticPathsForMultilang,
+    useTranslations,
+} from 'src/i18n/utils';
+import DefaultLayout from 'src/layouts/DefaultLayout.astro';
 
-import { careerPackages } from "src/config/career";
+import { careerPackages, consultationPackage } from 'src/config/career';
 
 export const prerender = true;
 export const getStaticPaths = staticPathsForMultilang();
@@ -15,39 +15,64 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<DefaultLayout title={t("nav.career_dev")}>
-  <div class="px-3 sm:px-10 py-5 bg-neutral-100">
-    <h1 class="text-3xl lg:text-4xl font-bold">
-      {t("career.title")}
-    </h1>
-  </div>
-  <div class="bg-white px-3 sm:px-10 py-5">
-    <p>
-      {t("career.description")}
-    </p>
-  </div>
-  <div class="px-3 sm:px-10 py-5 bg-neutral-100 space-y-5">
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-3">
-      {
-        careerPackages.map((v) => (
-          <div class="bg-white flex flex-col shadow-sm p-3">
-            <p class="uppercase font-semibold text-2xl">{v.name[lang]}</p>
+<DefaultLayout title={t('nav.career_dev')}>
+    <div class="px-3 sm:px-10 py-5 bg-neutral-100">
+        <h1 class="text-3xl lg:text-4xl font-bold">
+            {t('career.title')}
+        </h1>
+    </div>
+    <div class="bg-white px-3 sm:px-10 py-5">
+        <p>
+            {t('career.description')}
+        </p>
+    </div>
+    <div class="px-3 sm:px-10 py-10 bg-neutral-100 space-y-10">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+            {
+                careerPackages.map((v) => (
+                    <div class="bg-white flex flex-col drop-shadow-md p-4">
+                        <p class="uppercase font-semibold text-2xl">
+                            {v.name[lang]}
+                        </p>
+                        <hr class="my-2 border-primary border-2 w-10" />
+                        <ul class="list-disc pl-4 flex-grow">
+                            {v.points[lang].map((p) => (
+                                <li>{p}</li>
+                            ))}
+                        </ul>
+                        <p class="text-xl text-right font-bold mt-5">
+                            {v.price} Ft /{' '}
+                            {v.regularity == 'monthly' && t('basics.month')}
+                        </p>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+    <div class="px-3 sm:px-10 py-10">
+        <Fragment set:html={t('career.externals')} />
+    </div>
+    <div class="px-3 sm:px-10 py-10 bg-neutral-100">
+        <div
+            class="bg-white flex flex-col drop-shadow-md p-4 lg:max-w-xl mx-auto"
+        >
+            <p class="uppercase font-semibold text-2xl">
+                {consultationPackage.name[lang]}
+            </p>
+            <p class="text-sm text-primary font-medium uppercase">
+                {t('basics.ot-fee')}
+            </p>
             <hr class="my-2 border-primary border-2 w-10" />
             <ul class="list-disc pl-4 flex-grow">
-              {v.points[lang].map((p) => (
-                <li>{p}</li>
-              ))}
+                {consultationPackage.points[lang].map((p) => <li>{p}</li>)}
             </ul>
             <p class="text-xl text-right font-bold mt-5">
-              {v.price} Ft / {t("basics.month")}
+                {consultationPackage.price} Ft
             </p>
-          </div>
-        ))
-      }
+        </div>
     </div>
-    <div class="space-y-5">
-      <p class="text-sm">**{t("career.shorter")}</p>
-      <p class="text-xl">{t("career.contact")} <br />hello@icehockeypro57.hu</p>
+    <div class="px-3 sm:px-10 py-10 space-y-5">
+        <p>{t('career.last')}</p>
+        <p>{t('career.contact')}</p>
     </div>
-  </div>
 </DefaultLayout>
