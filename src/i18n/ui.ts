@@ -1,73 +1,76 @@
-export const languages = {
-  en: "🇬🇧 English",
-  hu: "🇭🇺 Magyar",
+export type Language = keyof typeof ui;
+
+export const languages: Record<Language, string> = {
+    en: '🇬🇧 English',
+    hu: '🇭🇺 Magyar',
 };
 
-export const defaultLang = "hu";
+export const defaultLang: Language = 'hu';
 
 export const ui = {
-  en: {
-    "basics.month": "month",
+    en: {
+        'basics.month': 'month',
+        'basics.ot-fee': 'One-time fee',
 
-    "seo.ogtitle": "Talent fostering for ambitious players.",
-    "seo.ogdescription":
-      "Modern training programs for your development from the start. We support your professional career.",
-    "seo.oglocale": "en_UK",
-    "seo.keywords":
-      "Hockey, IceHockey, Trainings, Skills, Mentoring, Counseiling, Camps, coach, true, max ivanov, talent, skill, camp, skate, select, tournament, AAA, AA, eliteprospect, academy",
+        'seo.ogtitle': 'Talent fostering for ambitious players.',
+        'seo.ogdescription':
+            'Modern training programs for your development from the start. We support your professional career.',
+        'seo.oglocale': 'en_UK',
+        'seo.keywords':
+            'Hockey, IceHockey, Trainings, Skills, Mentoring, Counseiling, Camps, coach, true, max ivanov, talent, skill, camp, skate, select, tournament, AAA, AA, eliteprospect, academy',
 
-    "nav.home": "Home",
-    "nav.about": "About us",
-    "nav.tournaments": "Tournaments",
-    "nav.abroad": "Abroad",
-    "nav.camps": "Camps",
-    "nav.contact": "Contact",
-    "nav.foundation": "Foundation",
-    "nav.join-trainings": "Join us!",
-    "nav.products": "Products",
-    "nav.career_dev": "Career Development",
+        'nav.home': 'Home',
+        'nav.about': 'About us',
+        'nav.tournaments': 'Tournaments',
+        'nav.abroad': 'Abroad',
+        'nav.camps': 'Camps',
+        'nav.contact': 'Contact',
+        'nav.foundation': 'Foundation',
+        'nav.join-trainings': 'Join us!',
+        'nav.products': 'Products',
+        'nav.career_dev': 'Career Development',
 
-    notfound: "Page not found",
+        notfound: 'Page not found',
 
-    "home.banner.lead": "Talent fostering for ambitious players.",
-    "home.banner.description":
-      "Modern training programs for your development from the start. We support your professional career.",
+        'home.banner.lead': 'Talent fostering for ambitious players.',
+        'home.banner.description':
+            'Modern training programs for your development from the start. We support your professional career.',
 
-    "home.trainings.lead": "Our trainings & services",
-    "home.trainings.description":
-      "We have put together training programs that achieve the intensive development of players in the most ambitious way. We have to highlight that international experience and a long playing history helped us create our training courses. The additional services we offer are essential for players and uniquely complement our training sessions. We are the only ones in Hungary that offer such a wide selection of the best professional support on the road to pro hockey.",
-    "home.trainings.group.lead": "Group Trainings",
-    "home.trainings.group.description":
-      "High intensity development exercises in small groups. This helps develop individual skills combined with real game situations and off-ice workouts that focus on strengthening coordination.",
-    "home.trainings.athletics.lead": "Athletic Trainings",
-    "home.trainings.athletics.description":
-      "Cultivating team sports at a high level is unimaginable without athletic foundations and their development. We not only focus on the development of stamina and motor skills, but also on achieving the most complex coordination possible through our athletic trainings.",
-    "home.trainings.private.lead": "Private Trainings",
-    "home.trainings.private.description":
-      "All players have strengths and skills that need to be improved. We can develop individual skills in the most targeted way through customized training. The focus is placed on the areas that the player wants to develop most intensively.",
+        'home.trainings.lead': 'Our trainings & services',
+        'home.trainings.description':
+            'We have put together training programs that achieve the intensive development of players in the most ambitious way. We have to highlight that international experience and a long playing history helped us create our training courses. The additional services we offer are essential for players and uniquely complement our training sessions. We are the only ones in Hungary that offer such a wide selection of the best professional support on the road to pro hockey.',
+        'home.trainings.group.lead': 'Group Trainings',
+        'home.trainings.group.description':
+            'High intensity development exercises in small groups. This helps develop individual skills combined with real game situations and off-ice workouts that focus on strengthening coordination.',
+        'home.trainings.athletics.lead': 'Athletic Trainings',
+        'home.trainings.athletics.description':
+            'Cultivating team sports at a high level is unimaginable without athletic foundations and their development. We not only focus on the development of stamina and motor skills, but also on achieving the most complex coordination possible through our athletic trainings.',
+        'home.trainings.private.lead': 'Private Trainings',
+        'home.trainings.private.description':
+            'All players have strengths and skills that need to be improved. We can develop individual skills in the most targeted way through customized training. The focus is placed on the areas that the player wants to develop most intensively.',
 
-    "home.reviews.lead": "What parents have to say",
+        'home.reviews.lead': 'What parents have to say',
 
-    "home.are-you-ready.base": "Are you ready? Sign up for our trainings.",
-    "home.are-you-ready.button": "Sign up for trainings",
+        'home.are-you-ready.base': 'Are you ready? Sign up for our trainings.',
+        'home.are-you-ready.button': 'Sign up for trainings',
 
-    "about.founder.name": "Attila Orbán",
-    "about.founder.text":
-      "Attila Orbán, former national ice hockey player and former professional player, is the head of our professional staff. In addition, under the auspices of the Hatvani Sports School, Attila is the professional manager of the Hatvani Gigászok ice hockey team, from the youngest age group through to the U18 team. He is a technical consultant for several ice hockey clubs, as well as a professional mentor for promising Hungarian ice hockey projects. He works as a professional manager, consultant and head coach. National hockey players, champions, specialists and psychologists experienced in outstanding technical trainings in their profession are coaches at development sessions and camps. Come and visit us, we welcome everyone.",
-    "about.coaches.lead": "Get to know our coaches",
-    "about.coaches.text": "Get to know our team of professionals.",
+        'about.founder.name': 'Attila Orbán',
+        'about.founder.text':
+            'Attila Orbán, former national ice hockey player and former professional player, is the head of our professional staff. In addition, under the auspices of the Hatvani Sports School, Attila is the professional manager of the Hatvani Gigászok ice hockey team, from the youngest age group through to the U18 team. He is a technical consultant for several ice hockey clubs, as well as a professional mentor for promising Hungarian ice hockey projects. He works as a professional manager, consultant and head coach. National hockey players, champions, specialists and psychologists experienced in outstanding technical trainings in their profession are coaches at development sessions and camps. Come and visit us, we welcome everyone.',
+        'about.coaches.lead': 'Get to know our coaches',
+        'about.coaches.text': 'Get to know our team of professionals.',
 
-    "camps.heading.secondary": "You can register for our camps here.",
-    "camps.heading.secondary-nocamp":
-      "We have no open registration for camps at the moment.",
+        'camps.heading.secondary': 'You can register for our camps here.',
+        'camps.heading.secondary-nocamp':
+            'We have no open registration for camps at the moment.',
 
-    "foundation.name": "Name",
-    "foundation.taxnumber": "Tax number",
-    "foundation.ban": "Bank account number",
-    "foundation.seat": "Seat",
+        'foundation.name': 'Name',
+        'foundation.taxnumber': 'Tax number',
+        'foundation.ban': 'Bank account number',
+        'foundation.seat': 'Seat',
 
-    "tournaments.description": "Hockey Tournament - Sign Up Now!",
-    "tournaments.content": `
+        'tournaments.description': 'Hockey Tournament - Sign Up Now!',
+        'tournaments.content': `
           <p class="font-medium text-lg">Calling All Boys and Girls U8-U18!</p>
           <p>
             Join us for exciting hockey tournaments where you can test your skills in 3x3, 4x4, and 5x5 games!<br />
@@ -83,12 +86,12 @@ export const ui = {
               </li>
             </ul>
           </div>`,
-    "tournaments.participate": "I participate!",
+        'tournaments.participate': 'I participate!',
 
-    "abroad.title": "Talented Players for International Leagues",
-    "abroad.subtitle":
-      "We help young, talented players advance to foreign university and professional leagues.",
-    "abroad.section1": `
+        'abroad.title': 'Talented Players for International Leagues',
+        'abroad.subtitle':
+            'We help young, talented players advance to foreign university and professional leagues.',
+        'abroad.section1': `
         <p>
           Our program focuses not only on sports careers but also offers the opportunity for players to continue their high school or university studies, ensuring they can achieve a degree alongside their sports career in a comprehensive career path.
         </p>
@@ -162,7 +165,7 @@ export const ui = {
         </div>
         <p class="pt-5">📩 Contact us, and let us help you start your international career!</p>
     `,
-    "abroad.section2": `
+        'abroad.section2': `
         <p class="font-medium">We can help with this too!</p>
         <p>
           Discover the opportunities with our international study programs! If
@@ -238,7 +241,7 @@ export const ui = {
           the first step toward a life-changing experience!
         </p>
     `,
-    "abroad.section3": `
+        'abroad.section3': `
         <p class="font-medium">Do you want to play in Europe? We can help!</p>
         <p>
           Your opportunity: Join training camps, tryouts,
@@ -260,83 +263,92 @@ export const ui = {
         </p>
     `,
 
-    "products.order": "Order placement: products@icehockeypro57.com",
-    "products.pickup": "Order pickup: At the next training.",
+        'products.order': 'Order placement: products@icehockeypro57.com',
+        'products.pickup': 'Order pickup: At the next training.',
 
-    "career.title": "Ice Hockey Career Development Packages",
-    "career.description":
-      "Building an ice hockey career is not just about technical skills, but also about achieving the set goals at the right time, in the right place, and with the right support. For years, we have been working to help the best players build their international careers. We have role models like Ferenc Karsai and Matyi Czabafy, who, through years of hard work and with the support of our professional team, are now key players for the best team in Finland, Jokerit! Our goal is to provide every player with the best opportunities to achieve their dreams and elevate their careers to the highest level.",
-    "career.shorter":
-      "If you don’t want a full year commitment, there is an option for a 4-month program, which is an additional 5000 HUF more than the selected package. This also provides an opportunity to support the players’ professional development while offering a more flexible solution for those who want to work on a shorter-term basis.",
-    "career.contact":
-      "Feel free to contact us, and we will help you select the most suitable program!",
+        'career.title': 'Ice Hockey Career Development Packages',
+        'career.description':
+            'Building an ice hockey career is not just about technical skills, but also about achieving the set goals at the right time, in the right place, and with the right support. For years, we have been working to help the best players build their international careers. We have role models like Ferenc Karsai and Matyi Czabafy, who, through years of hard work and with the support of our professional team, are now key players for the best team in Finland, Jokerit! Our goal is to provide every player with the best opportunities to achieve their dreams and elevate their careers to the highest level.',
+        'career.externals': `
+          <p class="font-semibold text-lg uppercase">External Participants (For those not attending regular training):</p>
+          <ul>
+            <li>1. Small - 45.000 Ft/month</li>
+            <li>2. Medium Package - 80.000 Ft/month</li>
+            <li>3. Large Csomag - 120.000 Ft/month</li>
+          </ul>`,
+        'career.last':
+            'To ensure proper development, it is important to work with a smaller, dedicated group of players rather than spreading attention too thin. Our goal is to provide maximum attention to the families who are willing to invest in the long term, ensuring that the results will be more visible and measurable.',
+        'career.contact':
+            'If you are interested in any of the packages or would like to know more details, feel free to contact our team, and we will help you choose the most suitable program!',
 
-    "formError.required": "Required!",
-    "formError.invalid": "Invalid!",
-    "formError.minlen": "Not long enough.",
-  },
-  hu: {
-    "basics.month": "hónap",
+        'formError.required': 'Required!',
+        'formError.invalid': 'Invalid!',
+        'formError.minlen': 'Not long enough.',
+    },
+    hu: {
+        'basics.month': 'hónap',
+        'basics.ot-fee': 'Egyszeri díj',
 
-    "seo.ogtitle": "Tehetséggondozás, célratörő játékosoknak!",
-    "seo.ogdescription":
-      "Modern edzésprogramok a fejlődésedhez, a kezdetektől. Professzionális karriered támogatói vagyunk!",
-    "seo.oglocale": "hu_HU",
-    "seo.keywords":
-      "Jégkorong, Hoki, Edzések, Tanácsadás, Táborok, Edzőtáborok, Tehetséggondozás, Mentorálás, Edzésprogramok, Játékosközvetítés, Külföldön, jeges, kapus, egyéni képzés, talent, kori, korcsolya, select, torna, AAA, AA, elit képzés, képzés, skill, akadémia, iskola, utánpótlás",
+        'seo.ogtitle': 'Tehetséggondozás, célratörő játékosoknak!',
+        'seo.ogdescription':
+            'Modern edzésprogramok a fejlődésedhez, a kezdetektől. Professzionális karriered támogatói vagyunk!',
+        'seo.oglocale': 'hu_HU',
+        'seo.keywords':
+            'Jégkorong, Hoki, Edzések, Tanácsadás, Táborok, Edzőtáborok, Tehetséggondozás, Mentorálás, Edzésprogramok, Játékosközvetítés, Külföldön, jeges, kapus, egyéni képzés, talent, kori, korcsolya, select, torna, AAA, AA, elit képzés, képzés, skill, akadémia, iskola, utánpótlás',
 
-    "nav.home": "Főoldal",
-    "nav.about": "Rólunk",
-    "nav.camps": "Táborok",
-    "nav.tournaments": "Tornák",
-    "nav.abroad": "Közvetítés",
-    "nav.contact": "Kapcsolat",
-    "nav.foundation": "Alapítvány",
-    "nav.join-trainings": "Csatlakozok az edzésekhez!",
-    "nav.products": "Termékek",
-    "nav.career_dev": "Karrierfejlesztés",
+        'nav.home': 'Főoldal',
+        'nav.about': 'Rólunk',
+        'nav.camps': 'Táborok',
+        'nav.tournaments': 'Tornák',
+        'nav.abroad': 'Közvetítés',
+        'nav.contact': 'Kapcsolat',
+        'nav.foundation': 'Alapítvány',
+        'nav.join-trainings': 'Csatlakozok az edzésekhez!',
+        'nav.products': 'Termékek',
+        'nav.career_dev': 'Karrierfejlesztés',
 
-    notfound: "Nincsen ilyen oldal",
+        notfound: 'Nincsen ilyen oldal',
 
-    "home.banner.lead": "Tehetséggondozás, célratörő játékosoknak!",
-    "home.banner.description":
-      "Modern edzésprogramok a fejlődésedhez, a kezdetektől. Professzionális karriered támogatói vagyunk!",
+        'home.banner.lead': 'Tehetséggondozás, célratörő játékosoknak!',
+        'home.banner.description':
+            'Modern edzésprogramok a fejlődésedhez, a kezdetektől. Professzionális karriered támogatói vagyunk!',
 
-    "home.trainings.lead": "Edzéseink & Szolgáltatásaink",
-    "home.trainings.description":
-      "Olyan edzésprogramokat állítottunk össze, melyek a legcélratörőbben érik el a játékosok intenzív fejlődését. Fontos elmondanunk, hogy nemzetközi tapasztalatok alapján és komoly játékos múlt segített minket abban, hogy létrejöttek képzéseink. Játékosok számára nélkülözhetetlen kiegészítő szolgáltatásaink, egyedülállóan egészítik edzéseink kínálatát. Magyarországon csak nálunk elérhető ilyen széles választékban a legjobb szakemberi támogatás a pro jégkorong felé vezető úton.",
-    "home.trainings.group.lead": "Csoportedzések",
-    "home.trainings.group.description":
-      "Csoportedzések keretében kis létszámú csoportokban zajlanak intenzív fejlesztő gyakorlatok, melyek segítik az egyéni készségek fejlődését. Az edzések során életszerű játékszituációkat és speciális száraz gyakorlatokat kombinálunk, melyek célja a koordináció fejlesztése.",
-    "home.trainings.athletics.lead": "Atlétikai Edzések",
-    "home.trainings.athletics.description":
-      "Az atlétikai edzések nélkülözhetetlenek a csapatjátékok magas szintű teljesítéséhez. Az állóképesség és mozgékonyság fejlesztése mellett kiemelten foglalkozunk a komplex koordinációfejlesztéssel is, így biztosítva a teljesítmény optimális szintjét a pályán.",
-    "home.trainings.private.lead": "Privát Edzések",
-    "home.trainings.private.description":
-      "Minden játékosnak vannak erősségei és fejlesztésre szoruló készségei. A legcélratörőbben tudjuk fejleszteni az egyéni készségeket a testreszabott edzésekkel. Az összpontosítás azokra területekre kerül, melyeket a legintenzívebben szeretné a játékos fejleszteni.",
+        'home.trainings.lead': 'Edzéseink & Szolgáltatásaink',
+        'home.trainings.description':
+            'Olyan edzésprogramokat állítottunk össze, melyek a legcélratörőbben érik el a játékosok intenzív fejlődését. Fontos elmondanunk, hogy nemzetközi tapasztalatok alapján és komoly játékos múlt segített minket abban, hogy létrejöttek képzéseink. Játékosok számára nélkülözhetetlen kiegészítő szolgáltatásaink, egyedülállóan egészítik edzéseink kínálatát. Magyarországon csak nálunk elérhető ilyen széles választékban a legjobb szakemberi támogatás a pro jégkorong felé vezető úton.',
+        'home.trainings.group.lead': 'Csoportedzések',
+        'home.trainings.group.description':
+            'Csoportedzések keretében kis létszámú csoportokban zajlanak intenzív fejlesztő gyakorlatok, melyek segítik az egyéni készségek fejlődését. Az edzések során életszerű játékszituációkat és speciális száraz gyakorlatokat kombinálunk, melyek célja a koordináció fejlesztése.',
+        'home.trainings.athletics.lead': 'Atlétikai Edzések',
+        'home.trainings.athletics.description':
+            'Az atlétikai edzések nélkülözhetetlenek a csapatjátékok magas szintű teljesítéséhez. Az állóképesség és mozgékonyság fejlesztése mellett kiemelten foglalkozunk a komplex koordinációfejlesztéssel is, így biztosítva a teljesítmény optimális szintjét a pályán.',
+        'home.trainings.private.lead': 'Privát Edzések',
+        'home.trainings.private.description':
+            'Minden játékosnak vannak erősségei és fejlesztésre szoruló készségei. A legcélratörőbben tudjuk fejleszteni az egyéni készségeket a testreszabott edzésekkel. Az összpontosítás azokra területekre kerül, melyeket a legintenzívebben szeretné a játékos fejleszteni.',
 
-    "home.reviews.lead": "idézetek szülőktől",
+        'home.reviews.lead': 'idézetek szülőktől',
 
-    "home.are-you-ready.base": "Készen állsz? Jelentkezz edzéseinkre!",
-    "home.are-you-ready.button": "Jelentkezni Akarok!",
+        'home.are-you-ready.base': 'Készen állsz? Jelentkezz edzéseinkre!',
+        'home.are-you-ready.button': 'Jelentkezni Akarok!',
 
-    "about.founder.name": "Orbán Attila",
-    "about.founder.text":
-      "Szakmai stábunk vezetője Orbán Attila korábbi válogatott jégkorongozó, volt profi játékos. Attila emellett a Hatvani Sportiskola égisze alatt a Hatvani Gigászok jégkorong csapatának szakmai vezetője, a legkisebbektől egészen az U18-as csapatig. Szakmai tanácsadója több jégkorong egyesületnek, továbbá ígéretes magyar jégkorong projektek szakmai mentora is. Dolgozik, mint szakmai vezető, szakmai tanácsadó és vezetőedző. Fejlesztéseink és táboraink edzői válogatott jégkorongozók, bajnokok, szakmájuk kiemelkedő technikai képzésekben jártas szakemberei, pszichológusai. Látogassatok el hozzánk, mindenkit szeretettel fogadunk!",
-    "about.coaches.lead": "Ismerd meg edzőinket!",
-    "about.coaches.text": "Ismerd meg profi szakemberekből álló csapatunkat.",
+        'about.founder.name': 'Orbán Attila',
+        'about.founder.text':
+            'Szakmai stábunk vezetője Orbán Attila korábbi válogatott jégkorongozó, volt profi játékos. Attila emellett a Hatvani Sportiskola égisze alatt a Hatvani Gigászok jégkorong csapatának szakmai vezetője, a legkisebbektől egészen az U18-as csapatig. Szakmai tanácsadója több jégkorong egyesületnek, továbbá ígéretes magyar jégkorong projektek szakmai mentora is. Dolgozik, mint szakmai vezető, szakmai tanácsadó és vezetőedző. Fejlesztéseink és táboraink edzői válogatott jégkorongozók, bajnokok, szakmájuk kiemelkedő technikai képzésekben jártas szakemberei, pszichológusai. Látogassatok el hozzánk, mindenkit szeretettel fogadunk!',
+        'about.coaches.lead': 'Ismerd meg edzőinket!',
+        'about.coaches.text':
+            'Ismerd meg profi szakemberekből álló csapatunkat.',
 
-    "camps.heading.secondary": "Itt jelentkezhetsz a táborainkra.",
-    "camps.heading.secondary-nocamp":
-      "Jelenleg egy táborunkra se lehet jelentkezni.",
+        'camps.heading.secondary': 'Itt jelentkezhetsz a táborainkra.',
+        'camps.heading.secondary-nocamp':
+            'Jelenleg egy táborunkra se lehet jelentkezni.',
 
-    "foundation.name": "Név",
-    "foundation.taxnumber": "Adószám",
-    "foundation.ban": "Bankszámlaszám",
-    "foundation.seat": "Székhely",
+        'foundation.name': 'Név',
+        'foundation.taxnumber': 'Adószám',
+        'foundation.ban': 'Bankszámlaszám',
+        'foundation.seat': 'Székhely',
 
-    "tournaments.description": "HokiTorna - Jelentkezz most!",
-    "tournaments.content": `
+        'tournaments.description': 'HokiTorna - Jelentkezz most!',
+        'tournaments.content': `
           <p class="font-medium text-lg">U8-U18 Fiúk és Lányok Figyelem!</p>
           <p>
             Gyere és vegyél részt izgalmas hokitornáinkon, ahol 3x3, 4x4, és 5x5
@@ -355,12 +367,12 @@ export const ui = {
               </li>
             </ul>
           </div>`,
-    "tournaments.participate": "Részt veszek!",
+        'tournaments.participate': 'Részt veszek!',
 
-    "abroad.title": "Játékosok külföldre közvetítése",
-    "abroad.subtitle":
-      "Fiatal, tehetséges játékosokat segítünk külföldi egyetemi és profi ligákba való kijutásban.",
-    "abroad.section1": `
+        'abroad.title': 'Játékosok külföldre közvetítése',
+        'abroad.subtitle':
+            'Fiatal, tehetséges játékosokat segítünk külföldi egyetemi és profi ligákba való kijutásban.',
+        'abroad.section1': `
         <p>
           A jelentkezők számára nem csak a sportkarrier áll a középpontban - lehetőséget biztosítunk arra is, hogy középiskolai vagy egyetemi tanulmányokat folytassanak, így egy teljes életpálya-modell mentén a diploma megszerzése is garantált.
         </p>
@@ -434,7 +446,7 @@ export const ui = {
         </div>
         <p class="pt-5">📩Lépj kapcsolatba velünk, és segítünk elindítani a nemzetközi karrieredet!</p>
     `,
-    "abroad.section2": `
+        'abroad.section2': `
         <p class="font-medium">Ebben is tudunk segíteni!</p>
           <p>
             Fedezd fel a lehetőségeket külföldi tanulmányi programjainkkal! Ha
@@ -498,41 +510,49 @@ export const ui = {
             Válaszd ki a számodra legmegfelelőbb külföldi tanulmányi programot, és tedd meg az első lépést egy életre szóló élmény felé!
           </p>
     `,
-    "abroad.section3": `
-        <p class="font-medium">Szeretnél Európában játszani? Mi segítünk!</p>
-        <p>
-          Lehetőség számodra: Csatlakozz Európában edzőtáborokhoz, tryoutokhoz,
-          és vegyél részt profi edzéseken! Tapasztald meg a legmagasabb szintű
-          szakmai fejlődést!
-        </p>
-        <div>
-          <p>Mit kínálunk?</p>
-          <ul class="pl-5 list-disc">
-            <li>Segítség az európai igazolásodhoz</li>
-            <li>Kapcsolatfelvétel edzőtáborokkal és tryoutokkal</li>
-            <li>Edzésekhez való csatlakozás lehetősége</li>
-            <li>Támogatás az itthoni iskolába való elhelyezkedéshez</li>
-          </ul>
-        </div>
-        <p>
-          Ne hagyd ki a lehetőséget, hogy elérd álmaidat Európában! <br />
-          📩 Keress minket és indulj el a siker felé vezető úton!
-        </p>
+        'abroad.section3': `
+            <p class="font-medium">Szeretnél Európában játszani? Mi segítünk!</p>
+            <p>
+              Lehetőség számodra: Csatlakozz Európában edzőtáborokhoz, tryoutokhoz,
+              és vegyél részt profi edzéseken! Tapasztald meg a legmagasabb szintű
+              szakmai fejlődést!
+            </p>
+            <div>
+              <p>Mit kínálunk?</p>
+              <ul class="pl-5 list-disc">
+                <li>Segítség az európai igazolásodhoz</li>
+                <li>Kapcsolatfelvétel edzőtáborokkal és tryoutokkal</li>
+                <li>Edzésekhez való csatlakozás lehetősége</li>
+                <li>Támogatás az itthoni iskolába való elhelyezkedéshez</li>
+              </ul>
+            </div>
+            <p>
+              Ne hagyd ki a lehetőséget, hogy elérd álmaidat Európában! <br />
+              📩 Keress minket és indulj el a siker felé vezető úton!
+            </p>
     `,
 
-    "products.order": "Rendelés felvétel: products@icehockeypro57.com",
-    "products.pickup": "Rendelés átvétele: A következő edzésen.",
+        'products.order': 'Rendelés felvétel: products@icehockeypro57.com',
+        'products.pickup': 'Rendelés átvétele: A következő edzésen.',
 
-    "career.title": "Jégkorong Karrier Fejlesztő Csomagok",
-    "career.description":
-      "A jékorong karrier építése nem csak a technikai tudásról szól, hanem arról is, hogy a megfelelő időben, a megfelelő helyen és a megfelelő támogatással érjük el a kitűzött célokat. Mi évek óta azon dolgozunk, hogy a legjobb játékosokat a nemzetközi szintű karrierhez segítjük. Olyan példaképeink vannak, mint Karsai Ferenc és Czabafy Matyi, akik a hosszú évek kemény munkájával és a szakmai csapatunk segítségével ma már a Finnország legjobb csapatában, a Jokeritnél meghatározó játékosok! A célunk, hogy minden játékos számára biztosítjuk a legjobb lehetőséget, hogy elérje álmait és a legmagasabb szintre emelje karrierjét.",
-    "career.shorter":
-      "Ha nem szeretnétek az egész éves elköteleződést, akkor lehetőség van 4 hónapos program igénybevételére is, amely a választott csomag 5000 Ft-tal drágább változata. Ez is lehetőséget ad arra, hogy a játékosok szakmai fejlődését segítse, miközben rugalmasabb megoldást kínál azok számára, akik rövidebb távon szeretnének dolgozni.",
-    "career.contact":
-      "Keressetek minket bizalommal, és segítünk a legmegfelelőbb program kiválasztásában!",
+        'career.title': 'Jégkorong Karrier Fejlesztő Csomagok',
+        'career.description':
+            'A jékorong karrier építése nem csak a technikai tudásról szól, hanem arról is, hogy a megfelelő időben, a megfelelő helyen és a megfelelő támogatással érjük el a kitűzött célokat. Mi évek óta azon dolgozunk, hogy a legjobb játékosokat a nemzetközi szintű karrierhez segítjük. Olyan példaképeink vannak, mint Karsai Ferenc és Czabafy Matyi, akik a hosszú évek kemény munkájával és a szakmai csapatunk segítségével ma már a Finnország legjobb csapatában, a Jokeritnél meghatározó játékosok! A célunk, hogy minden játékos számára biztosítjuk a legjobb lehetőséget, hogy elérje álmait és a legmagasabb szintre emelje karrierjét.',
+        'career.externals': `
+          <p class="font-semibold text-lg uppercase">Külsős játékosoknak (Nem edzésre járóknak):</p>
+          <ul>
+            <li>1. Kis Csomag - 45,000 Ft/hó</li>
+            <li>2. Közepes Csomag - 80,000 Ft/hó</li>
+            <li>3. Nagy Csomag - 120,000 Ft/hó</li>
+          </ul>
+    `,
+        'career.last':
+            'A megfelelő fejlődés érdekében fontos, hogy egy kisebb, elkötelezett játékoscsoporttal dolgozzunk, ne pedig szétszórjuk a figyelmet túl sok felé. A célunk, hogy a családok, akik hajlandóak hosszú távon befektetni, maximális figyelmet kapjanak, és az eredmények látványosabbak és mérhetőbbek legyenek.',
+        'career.contact':
+            'Ha érdekel bármelyik csomag, vagy szeretnél további részleteket megtudni, bátran keresd fel csapatunkat, és segítünk kiválasztani a legmegfelelőbb programot!',
 
-    "formError.required": "Kötelező!",
-    "formError.invalid": "Érvénytelen!",
-    "formError.minlen": "Nem elég hosszú.",
-  },
+        'formError.required': 'Kötelező!',
+        'formError.invalid': 'Érvénytelen!',
+        'formError.minlen': 'Nem elég hosszú.',
+    },
 } as const;
